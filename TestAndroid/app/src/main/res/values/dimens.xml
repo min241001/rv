@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="calculator_high_margin">50dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_7dp">7dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="_120dp">120dp</dimen>
+    <dimen name="_128dp">128dp</dimen>
+    <dimen name="_136dp">136dp</dimen>
+    <dimen name="d20">20dp</dimen>
+    <dimen name="d24">24dp</dimen>
+    <dimen name="d28">28dp</dimen>
+    <dimen name="d30">30dp</dimen>
+
+    <!--  字号大小根据尺寸为320*379，密度为120的手表计算得出，请勿修改  -->
+    <dimen name="_32sp">24sp</dimen>
+    <dimen name="_30sp">22sp</dimen>
+    <dimen name="_24sp">18sp</dimen>
+    <dimen name="_20sp">16sp</dimen>
+    <dimen name="_18sp">14sp</dimen>
+    <dimen name="_16sp">12sp</dimen>
+    <dimen name="_14sp">10sp</dimen>
+
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+</resources>

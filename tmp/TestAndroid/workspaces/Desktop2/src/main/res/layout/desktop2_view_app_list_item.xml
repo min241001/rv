@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <com.android.launcher3.common.widget.CircleImageView
+        android:id="@+id/app_icon"
+        android:layout_width="78dp"
+        android:layout_height="78dp" />
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/Desktop2TextStyle"
+        android:text="测试文本"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp" />
+
+</LinearLayout>

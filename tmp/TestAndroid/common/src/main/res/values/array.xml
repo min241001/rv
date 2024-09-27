@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--表盘选择-->
+    <integer-array name="_default_face">
+        <item>@array/_default_face_id</item>
+        <item>@array/_default_face_name</item>
+        <item>@array/_default_face_thumb</item>
+        <item>@array/_default_face_class</item>
+    </integer-array>
+    <integer-array name="_default_face_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+    <string-array name="_default_face_name">
+        <item>数字转动</item>
+        <item>彩虹条</item>
+        <item>七彩气球</item>
+        <item>罗马数字</item>
+        <item>渐变数字</item>
+        <item>夜色刻度</item>
+    </string-array>
+
+    <integer-array name="_default_face_thumb">
+        <item>@drawable/icon_thumb_face1</item>
+        <item>@drawable/icon_thumb_face2</item>
+        <item>@drawable/icon_thumb_face3</item>
+        <item>@drawable/icon_thumb_face4</item>
+        <item>@drawable/icon_thumb_face5</item>
+        <item>@drawable/icon_thumb_face6</item>
+    </integer-array>
+
+    <string-array name="_default_face_class">
+        <item>com.android.launcher3.dial1.Dial1Fragment</item>
+        <item>com.android.launcher3.dial2.Dial2Fragment</item>
+        <item>com.android.launcher3.dial3.Dial3Fragment</item>
+        <item>com.android.launcher3.dial4.Dial4Fragment</item>
+        <item>com.android.launcher3.dial5.Dial5Fragment</item>
+        <item>com.android.launcher3.dial6.Dial6Fragment</item>
+    </string-array>
+    <integer-array name="_default_face_type"><!--0是圆款、1是方款、2是通用-->
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <!--风格选择-->
+    <integer-array name="_default_style">
+        <item>@array/_default_style_id</item>
+        <item>@array/_default_style_name</item>
+        <item>@array/_default_style_thumb</item>
+        <item>@array/_default_style_class</item>
+        <item>@array/_default_style_type</item>
+    </integer-array>
+    <integer-array name="_default_style_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
+    <string-array name="_default_style_name">
+        <item>九宫格</item>
+        <item>蜂窝</item>
+        <item>四宫格</item>
+        <item>棋盘</item>
+        <item>竖屏列表</item>
+        <item>齿轮风格</item>
+        <item>3x4</item>
+    </string-array>
+    <integer-array name="_default_style_thumb">
+        <item>@mipmap/thumb_style1</item>
+        <item>@mipmap/cellular</item>
+        <item>@mipmap/thumb_style2</item>
+        <item>@mipmap/checker_board</item>
+        <item>@mipmap/thumb_style3</item>
+        <item>@mipmap/thumb_style4</item>
+        <item>@mipmap/thumb_style4</item>
+    </integer-array>
+    <string-array name="_default_style_class">
+        <item>com.android.launcher3.desktop1.Desktop1Fragment</item>
+        <item>com.android.launcher3.desktop2.Desktop2Fragment</item>
+        <item>com.android.launcher3.desktop5.Desktop5Fragment</item>
+        <item>com.android.launcher3.desktop4.Desktop4Fragment</item>
+        <item>com.android.launcher3.desktop3.Desktop3Fragment</item>
+        <item>com.android.launcher3.desktop6.Desktop6Fragment</item>
+        <item>com.example.desktop7.view.Desktop7Fragment</item>
+    </string-array>
+    <integer-array name="_default_style_type"><!--0是圆款、1是方款、2是通用-->
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <!--壁纸选择-->
+    <integer-array name="_default_wallpaper">
+        <item>@array/_default_wallpaper_id</item>
+        <item>@array/_default_wallpaper_name</item>
+        <item>@array/_default_wallpaper_thumb</item>
+        <item>@array/_default_wallpaper_class</item>
+        <item>@array/_default_wallpaper_type</item>
+    </integer-array>
+    <integer-array name="_default_wallpaper_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+    <string-array name="_default_wallpaper_name">
+        <item>壁纸选择1</item>
+        <item>壁纸选择2</item>
+        <item>壁纸选择3</item>
+        <item>壁纸选择4</item>
+        <item>壁纸选择5</item>
+        <item>壁纸选择6</item>
+    </string-array>
+    <integer-array name="_default_wallpaper_thumb">
+        <item>@drawable/icon_thumb_wallpaper3</item>
+        <item>@drawable/icon_thumb_wallpaper1</item>
+        <item>@drawable/icon_thumb_wallpaper2</item>
+        <item>@drawable/icon_thumb_wallpaper4</item>
+        <item>@drawable/icon_thumb_wallpaper5</item>
+        <item>@drawable/icon_thumb_wallpaper6</item>
+    </integer-array>
+    <string-array name="_default_wallpaper_class">
+        <item>com.android.launcher3.dial3.Dial3Fragment</item>
+        <item>com.android.launcher3.dial1.Dial1Fragment</item>
+        <item>com.android.launcher3.dial2.Dial2Fragment</item>
+    </string-array>
+    <integer-array name="_default_wallpaper_type"><!--0是圆款、1是方款、2是通用-->
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <!--应用监督是否显示-->
+    <integer-array name="_default_monitor_app">
+        <item>@array/_default_monitor_app_name</item>
+    </integer-array>
+    <string-array name="_default_monitor_app_name">
+        <item>文件管理器</item>
+        <item>下载</item>
+        <item>snow</item>
+        <item>搜狗输入法</item>
+        <item>设置</item>
+        <item>支付宝</item>
+        <item>小度</item>
+        <item>酷我音乐</item>
+        <item>拨号</item>
+        <item>短信</item>
+        <item>手电筒</item>
+    </string-array>
+
+    <!--应用信息-->
+    <integer-array name="_default_system_app">
+        <item>@array/_default_system_app_name</item>
+        <item>@array/_default_system_app_package</item>
+        <item>@array/_default_system_app_icon</item>
+        <item>@array/_default_system_app_preinstall</item>
+    </integer-array>
+
+    <string-array name="_default_system_app_name">
+        <item>拨号</item>
+        <item>天气</item>
+        <item>通讯录</item>
+        <item>微聊</item>
+        <item>视频</item>
+        <item>相册</item>
+        <item>课程表</item>
+        <item>短信</item>
+        <item>录音</item>
+        <item>西萌主题</item>
+        <item>视频通话</item>
+        <item>应用市场</item>
+        <item>西萌钱包</item>
+        <item>风格</item>
+        <item>相机</item>
+        <item>加好友</item>
+        <item>二维码</item>
+        <item>工具</item>
+        <item>密码锁屏</item>
+        <!--        <item>浏览器</item>-->
+        <item>设置</item>
+        <item>超级省电</item>
+        <item>呼吸</item>
+        <item>手电筒</item>
+        <item>血氧</item>
+        <item>血压</item>
+        <item>心率</item>
+        <item>体温</item>
+        <item>秒表</item>
+    </string-array>
+
+    <string-array name="_default_system_app_package">
+        <item>com.baehug.dialer</item>
+        <item>com.baehug.weather</item>
+        <item>com.baehug.contacts</item>
+        <item>com.baehug.watch.wechat</item>
+        <item>com.baehug.video</item>
+        <item>com.baehug.album</item>
+        <item>com.baehug.course</item>
+        <item>com.baehug.sms</item>
+        <item>com.baehug.record</item>
+        <item>com.baehug.theme</item>
+        <item>com.baehug.videochat</item>
+        <item>com.baehug.appstore</item>
+        <item>com.baehug.wallet</item>
+        <item>com.android.launcher3.moudle.selector.view.WorkspaceSelectorActivity</item>
+        <item>com.baehug.camera</item>
+        <item>com.baehug.meet</item>
+        <item>com.ximeng.qrcode</item>
+        <item>com.baehug.util</item>
+        <item>com.baehug.facerecognition</item>
+        <!--        <item>org.chromium.webview_shell</item>-->
+        <item>com.baehug.settings</item>
+        <item>com.baehug.power</item>
+        <item>com.baehug.breathe</item>
+        <item>com.baehug.light</item>
+        <!--        血氧-->
+        <item>com.baehug.blood</item>
+        <!--        血压-->
+        <item>com.baehug.pressure</item>
+        <!--        心率-->
+        <item>com.baehug.heart</item>
+        <!--        体温-->
+        <item>com.baehug.temperature</item>
+        <item>com.baehug.stopwatch</item>
+    </string-array>
+
+    <integer-array name="_default_system_app_icon">
+        <item>@drawable/icon_dialer</item>
+        <item>@drawable/icon_weather</item>
+        <item>@drawable/icon_contacts</item>
+        <item>@drawable/icon_wechat</item>
+        <item>@drawable/icon_video</item>
+        <item>@drawable/icon_gallery3d</item>
+        <item>@drawable/icon_course</item>
+        <item>@drawable/icon_mms</item>
+        <item>@drawable/icon_record</item>
+        <item>@drawable/icon_theme</item>
+        <item>@drawable/icon_videocall</item>
+        <item>@drawable/icon_appstore</item>
+        <item>@drawable/icon_wallet</item>
+        <item>@drawable/icon_style</item>
+        <item>@drawable/icon_hwcamera</item>
+        <item>@drawable/icon_friend</item>
+        <item>@drawable/icon_qrcode</item>
+        <item>@drawable/icon_util</item>
+        <item>@drawable/icon_facerecognition</item>
+        <!--        <item>@drawable/icon_browser</item>-->
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_super_power</item>
+        <item>@drawable/icon_breathe</item>
+        <item>@drawable/icon_flashlight</item>
+        <item>@drawable/icon_blood</item>
+        <item>@drawable/icon_pressure</item>
+        <item>@drawable/icon_heart</item>
+        <item>@drawable/icon_temperature</item>
+        <item>@drawable/icon_stopwatch</item>
+    </integer-array>
+
+    <integer-array name="_default_system_app_preinstall">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <!--        <item>1</item>-->
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+
+    <string-array name="rhythm">
+        <item>缓慢</item>
+        <item>正常</item>
+        <item>稍快</item>
+    </string-array>
+
+
+    <string-array name="duration">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
+</resources>

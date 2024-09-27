@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gjj.gd.materialdesign_v7">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget_study.toolbar.JichuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.toolbar.ZhifuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Toolbar.ZhiHu" />
+        <activity
+            android:name=".ColorPaletteActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".widget_study.toolbar.ToolbarInstance1Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Toolbar.ZhiHu" />
+        <activity
+            android:name=".widget_study.toolbar.ToolbarInstance2Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Toolbar.ZhiHu" />
+        <activity
+            android:name=".widget_study.toolbar.ToolbarInstance3Activity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".widget_study.constraintlayout.ConstraintlayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.tablayout.TabLayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.tablayout.TbCustomeTabViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.toolbar.ToolBarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.tablayout.AllTabLayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.coordinatorlayout.CoordinatorLayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.coordinatorlayout.BehaviorInstance1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.coordinatorlayout.CombineSnackbarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.coordinatorlayout.TestActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".widget_study.snackbar.SnackBarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.cardview.CardViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.fab.FabActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".widget_study.appbarlayout.AppbarLayoutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".widget_study.textinputlayout.TextInputLayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.recyclerview.ClassifyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.recyclerview.RecyclerViewMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.recyclerview.RefreshAndLoadMoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.recyclerview.HeaderAndFooterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ZFBHomeTelescopicActivity"
+            android:exported="true"
+            android:label="@string/title_activity_zfbhome_page_pull_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ComprehensiveExampleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".widget_study.recyclerview.AddRemoveItemActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CopyAirbnbAppHomeNavActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Instance3Activity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

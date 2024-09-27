@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/vof_blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        app:blurOverlayColor="@color/colorOverlay">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/tuef_nsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+
+            android:fillViewport="true">
+            <!--  android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="beforeDescendants"
+            android:fillViewport="true"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--android:background="@drawable/bg_gaussian_blur"-->
+
+                <RelativeLayout
+                    android:id="@+id/tuef_head_layout"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <TextView
+                        android:id="@+id/tf_tv_date"
+                        android:layout_width="120dip"
+                        android:layout_height="120dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dip"
+                        android:maxWidth="120dip" />
+
+                    <com.renny.contractgridview.view.AnalogClockView
+                        android:id="@+id/analogClock1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_below="@+id/tuef_head_layout">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vertical_overlay_rv"
+                        android:background="@color/color_f27777"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants"
+                        />
+                </RelativeLayout>
+                <!-- android:descendantFocusability="blocksDescendants"
+                 android:focusable="false"
+                        android:focusableInTouchMode="false"-->
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </eightbitlab.com.blurview.BlurView>
+
+    <RelativeLayout
+        android:id="@+id/vertical_overlay_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/bg_vertical_fragment"
+        android:elevation="30dp">
+
+        <RelativeLayout
+            android:id="@+id/vertical_overlay_plus_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dip"
+            android:layout_marginTop="20dip"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/vertical_overlay_plus"
+                android:layout_width="84dip"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/vertical_fragment_button"></ImageButton>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_plus36"></ImageView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/vertical_overlay_complete"
+            android:layout_width="84dip"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dip"
+            android:layout_marginRight="36dip"
+            android:background="@drawable/vertical_fragment_button"
+            android:text="@string/complete"
+            android:textColor="@color/text_color_default"
+            android:textSize="18sp"
+            android:visibility="gone"></Button>
+
+    </RelativeLayout>
+</RelativeLayout>
