@@ -35,7 +35,7 @@ public class BottomScaleLayoutManager extends RecyclerView.LayoutManager {
     private int horizontalScrollOffset;
 
     //头部是否也要层叠，默认需要
-    private boolean topOver;
+    private final boolean topOver;
     private int viewWidth, viewHeight;
 
     public BottomScaleLayoutManager(Context context) {
@@ -172,10 +172,7 @@ public class BottomScaleLayoutManager extends RecyclerView.LayoutManager {
             // 遍历Recycler中保存的View取出来
             int bottomOffset = (i + 1) * viewHeight - offset;
             int topOffset = i * viewHeight - offset;
-            boolean needAdd = true;
-            if (bottomOffset - displayHeight >= overDist) {
-                needAdd = false;
-            }
+            boolean needAdd = bottomOffset - displayHeight < overDist;
             if (topOffset < -overDist && i != 0 && topOver
                     || topOffset < -overDist && !topOver) {
                 needAdd = false;
@@ -196,11 +193,7 @@ public class BottomScaleLayoutManager extends RecyclerView.LayoutManager {
                 int realBottomOffset = bottomOffset;
 
                 if (displayHeight - bottomOffset <= height * edgePercent) {
-                    if(i != itemCount - 1) {
-                        adjustScale(view, slowTimes, getChildCount(), i, true);
-                    }else{
-                        adjustScale(view, slowTimes, getChildCount(), i, false);
-                    }
+                    adjustScale(view, slowTimes, getChildCount(), i, i != itemCount - 1);
                 }
                 layoutDecoratedWithMargins(view, 0, realBottomOffset - height, width, realBottomOffset);
                 //layoutDecoratedWithMargins(view, 0, realBottomOffset, width, realBottomOffset+ height);

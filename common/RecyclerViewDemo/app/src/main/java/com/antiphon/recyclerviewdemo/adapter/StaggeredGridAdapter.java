@@ -20,8 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * @类描述 {TODO}瀑布流适配器
  */
 public class StaggeredGridAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<String> mData;
+    private final Context mContext;
+    private final List<String> mData;
     private int mLinear;//线性方向
 
     public StaggeredGridAdapter(Context context, List<String> stringList) {

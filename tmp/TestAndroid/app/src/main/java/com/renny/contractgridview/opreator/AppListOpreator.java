@@ -74,7 +74,7 @@ public class AppListOpreator {
         //notifyDataSetChanged();
         //StringUtil.SendEventMsg(1, "show_puls_button");
         Message msg = new Message();
-        msg.what = Constants.msgWhat.OPEN_EDIT_MODE;
+        msg.what = Constants.msgWhat.OPEN_EDITMODE_STATUS;
         msg.arg1 = position;
         handler.sendMessageDelayed(msg, 100);
     }

@@ -12,10 +12,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.renny.contractgridview.R;
+import com.renny.contractgridview.base.Constants;
 import com.renny.contractgridview.bean.AppInfoBean;
+import com.renny.contractgridview.event.ItemEventListener;
 import com.renny.contractgridview.opreator.AppListOpreator;
 import com.renny.contractgridview.utils.AppUtils;
 import com.renny.contractgridview.utils.LogUtil;
@@ -26,26 +29,29 @@ import java.util.List;
  * Created by pengmin on 2024/8/30.
  */
 
-public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlayAdapter.viewHolder> {
+public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlayAdapter.viewHolder> implements ItemEventListener {
     private static final String TAG = "itemc";
+    protected OnItemClickListener onItemClickListener;
+    protected OnItemLongClickListener onItemLongClickListener;
     private static final int ITEM_TYPE_NORMAL = 0;//普通类型
     private static final int ITEM_TYPE_HEAD = 1;//尾部局类型
     private View mHeadView;//尾部局
     private List<AppInfoBean> beans;
     private List<AppInfoBean> beans2;
-    private OnItemClickListener onItemClickListener;
     private Context context;
     private Handler mHandler;
     private RecyclerView rv;
 
 
-    public VerticalOverlayAdapter(List<AppInfoBean> beans, List<AppInfoBean> beans2, Handler mHandler, RecyclerView rv,Context context) {
+    public VerticalOverlayAdapter(List<AppInfoBean> beans, List<AppInfoBean> beans2, Handler mHandler, RecyclerView rv, Context context) {
         this.beans = beans;
         this.beans2 = beans2;
         this.context = context;
         this.mHandler = mHandler;
         this.rv = rv;
+        LogUtil.i(Constants.ft, "init costruct");
     }
+
     public void setHeadView() {
         if (this.beans == null) {
             return;
@@ -53,28 +59,30 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
         AppInfoBean bean = new AppInfoBean();
         bean.setType(-1);
         this.beans.add(0, bean);
+        LogUtil.i(Constants.ft, "set head data");
     }
 
     @Override
-    public viewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public viewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LogUtil.i(Constants.ft, "onCreateViewHolder");
         LayoutInflater inflater = LayoutInflater.from(context);
         if (viewType == ITEM_TYPE_HEAD) {//头布局
             mHeadView = inflater.inflate(R.layout.head_banner, rv, false);
-            //return new RecyclerView.ViewHolder(mHeadView){};
-            //viewHolder(view);
             return new viewHolder(mHeadView);
-        }else {
-            //View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.vertical_overlay_fragment_item,
-             //       viewGroup, false);
-            View view =inflater.inflate(R.layout.vertical_overlay_fragment_item,viewGroup, false);
+        } else {
+            //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.vertical_overlay_fragment_item,
+            //      parent, false);
+            View view = inflater.inflate(R.layout.vertical_overlay_fragment_item, parent, false);
             return new viewHolder(view);
         }
 
     }
 
+
     @Override
     public int getItemViewType(int position) {
-        if (mHeadView != null && position == 0) {//头布局
+        LogUtil.i(Constants.ft, "getItemViewType");
+        if (position == 0) {//头布局
             return ITEM_TYPE_HEAD;
         }
         return ITEM_TYPE_NORMAL;//普通类型
@@ -82,10 +90,13 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
     }
 
     @Override
-    public void onBindViewHolder(viewHolder viewHolder, int position) {
-        if(viewHolder.getItemViewType()==ITEM_TYPE_HEAD){
+    public void onBindViewHolder(viewHolder holder, int position) {
+        LogUtil.i(Constants.fe, "onBindViewHolder");
+        LogUtil.i(Constants.fe, "holder.getItemViewType():"+holder.getItemViewType());
+        if (holder.getItemViewType() == ITEM_TYPE_HEAD) {
 
-        }else {
+        } else {
+            viewHolder viewHolder = (viewHolder) holder;
             viewHolder.app_name.setText(beans.get(position).getApp_name());
             viewHolder.textView2.setText(context.getString(R.string.all_apps));
             viewHolder.textView2.setTextColor(context.getResources().getColor(R.color.text_color_default));
@@ -145,26 +156,26 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
             viewHolder.v_root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    LogUtil.i(Constants.fe, "click1" );
                     if (onItemClickListener != null) {
-                        int pos = viewHolder.getLayoutPosition();
-                        onItemClickListener.onItemClik(viewHolder.itemView, pos);
+                        LogUtil.i(Constants.fe, "click" );
+                        onItemClickListener.onItemClick(viewHolder.itemView, position);
                     }
 
                 }
-
             });
             viewHolder.v_root.setOnLongClickListener(new View.OnLongClickListener() {
-
                 @Override
                 public boolean onLongClick(View v) {
-                    if (onItemClickListener != null) {
-                        int pos = viewHolder.getLayoutPosition();
-                        onItemClickListener.onItemLongClik(viewHolder.itemView, pos);
+                    LogUtil.i(Constants.fe, "long click1" );
+                    if (onItemLongClickListener != null) {
+                        LogUtil.i(Constants.fe, "long click" );
+                        onItemLongClickListener.onItemLongClick(viewHolder.itemView, position);
                     }
                     return false;
                 }
             });
-            viewHolder.rl1.setOnLongClickListener(new View.OnLongClickListener() {
+            /*viewHolder.rl1.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     AppListOpreator.InsertPlusItem(AppUtils.defaultApp, position, VerticalOverlayAdapter.this, mHandler);
@@ -178,44 +189,27 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
                     return false;
                 }
             });
+        }*/
         }
-        onViewRecycled(viewHolder);
+        onViewRecycled(holder);
 
     }
 
-    private void InitGridView(GridView gv) {
-        if (beans2.size() > 3) {
-            beans2 = beans2.subList(0, 3);
-        }
-        GridViewAdapter adapter = new GridViewAdapter(beans2, context);
-        adapter.setListView(gv);
-        gv.setAdapter(adapter);
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                AppUtils.LauncherActivity(context, beans2.get(position).getPackage_name());
-            }
-        });
-        gv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                                          @Override
-                                          public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                                              //ImageView iv = view.findViewById(R.id.item_card_gv_item_del);
-                                              //iv.setVisibility(View.VISIBLE);
-                                              // adapter.notifyDataSetChanged();
-                                              Toast.makeText(context, "del visible", Toast.LENGTH_SHORT).show();
-
-                                              return false;
-                                          }
-                                      }
-
-        );
-    }
 
     @Override
     public int getItemCount() {
+        LogUtil.i(Constants.ft, "getItemCount");
         return beans.size();
     }
+    //普通类型ViewHolder
+    public class HeadHolder extends RecyclerView.ViewHolder {
+        //TextView mTv_name;
 
+        HeadHolder(@NonNull View itemView) {
+            super(itemView);
+            //mTv_name = itemView.findViewById(R.id.tv_name);
+        }
+    }
 
     class viewHolder extends RecyclerView.ViewHolder {
         View v_root;
@@ -231,6 +225,7 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
         public viewHolder(View v) {
             super(v);
             v_root = v;
+
             app_name = v.findViewById(R.id.app_name);
             textView2 = v.findViewById(R.id.info_text2);
             app_icon = v.findViewById(R.id.app_icon);
@@ -249,14 +244,11 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<VerticalOverlay
         }
     }
 
-    public interface OnItemClickListener {
-        void onItemClik(View view, int position);
-
-        void onItemLongClik(View view, int position);
-    }
-
     public void setItemClickListener(OnItemClickListener mOnItemClickListener) {
         this.onItemClickListener = mOnItemClickListener;
     }
 
+    public void setItemLongClickListener(OnItemLongClickListener mOnItemLongClickListener) {
+        this.onItemLongClickListener = mOnItemLongClickListener;
+    }
 }

@@ -27,14 +27,14 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url "https://jitpack.io" }
         mavenLocal()
-        maven {
+        /*maven {
             credentials{
                 username 'xbxandroid'
                 password 'xbxandroid'
             }
             allowInsecureProtocol = true
             url 'http://nexus.ximengsz.cn/repository/maven-baehug-android/'
-        }
+        }*/
         gradlePluginPortal()
         google()
         mavenCentral()

@@ -20,8 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * @类描述 {TODO}适配器
  */
 public class ItemDecorationAnimatorAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<String> mData;
+    private final Context mContext;
+    private final List<String> mData;
 
     private int mItem_Animator_type = 0;
     public static final int ITEM_ADD = 0;//增加item

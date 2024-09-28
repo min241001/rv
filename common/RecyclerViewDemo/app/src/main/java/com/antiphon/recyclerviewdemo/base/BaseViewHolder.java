@@ -26,9 +26,9 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
 
     // SparseArray 比 HashMap 更省内存，在某些条件下性能更好，只能存储 key 为 int 类型的数据，
     // 用来存放 View 以减少 findViewById 的次数
-    private SparseArray<View> viewSparseArray;
+    private final SparseArray<View> viewSparseArray;
     //这个是item的对象
-    private View mItemView;
+    private final View mItemView;
 
     public BaseViewHolder(View itemView) {
         super(itemView);
@@ -217,7 +217,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     public BaseViewHolder setChecked(int viewId, boolean checked) {
-        Checkable view = (Checkable) getView(viewId);
+        Checkable view = getView(viewId);
         view.setChecked(checked);
         return this;
     }

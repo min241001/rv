@@ -23,8 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * @类描述 {TODO}不同类型item适配器
  */
 public class TypeViewAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<Goods> mData;
+    private final Context mContext;
+    private final List<Goods> mData;
     public static final int ITEM_TYPE_NORMAL = 0;//普通类型
     public static final int ITEM_TYPE_SECTION = 1;//特殊类型
 

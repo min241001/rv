@@ -20,8 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * @类描述 {TODO}线性垂直适配器
  */
 public class LinearVerticalAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<String> mData;
+    private final Context mContext;
+    private final List<String> mData;
 
     public LinearVerticalAdapter(Context context, List<String> stringList) {
         this.mContext = context;

@@ -21,8 +21,8 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
  * @类描述 {TODO}头尾布局适配器
  */
 public class HeadFootViewAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<String> mData;
+    private final Context mContext;
+    private final List<String> mData;
 
     private  View mHeadView;//头布局
     private  View mFootView;//尾部局
@@ -30,7 +30,7 @@ public class HeadFootViewAdapter extends RecyclerView.Adapter {
     private static final int ITEM_TYPE_NORMAL = 0;//普通类型
     private static final int ITEM_TYPE_HEAD = 1;//头布局类型
     private static final int ITEM_TYPE_FOOT = 2;//尾部局类型
-    private RecyclerView rv;
+    private final RecyclerView rv;
 
     public HeadFootViewAdapter(Context context, List<String> stringList,RecyclerView rv) {
         this.mContext = context;

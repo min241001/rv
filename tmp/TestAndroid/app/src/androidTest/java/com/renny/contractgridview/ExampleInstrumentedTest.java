@@ -1,5 +1,6 @@
 package com.renny.contractgridview;
 
+import android.app.Instrumentation;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
@@ -8,6 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +22,7 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
+        Instrumentation InstrumentationRegistry;
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("com.renny.contractgridview", appContext.getPackageName());

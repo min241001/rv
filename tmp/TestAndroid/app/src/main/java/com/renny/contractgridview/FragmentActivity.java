@@ -7,13 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.android.launcher3.desktop1.Desktop1Fragment;
-import com.android.launcher3.desktop2.Desktop2Fragment;
-import com.android.launcher3.desktop3.Desktop3Fragment;
-import com.android.launcher3.desktop4.Desktop4Fragment;
-import com.android.launcher3.desktop6.Desktop6Fragment;
-import com.example.desktop7.view.Desktop7Fragment;
-
 public class FragmentActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
@@ -21,7 +14,7 @@ public class FragmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 //Fragment启动方法封装
-        replaceFragment(new Desktop1Fragment());
+        //replaceFragment(new Desktop1Fragment());
 
     }
     private void replaceFragment(Fragment fragment) {

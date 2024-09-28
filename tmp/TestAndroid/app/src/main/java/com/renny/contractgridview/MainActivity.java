@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +26,7 @@ import com.renny.contractgridview.adapter.OverlayLayoutManager;
 import com.renny.contractgridview.adapter.VerticalOverlayAdapter;
 import com.renny.contractgridview.base.Constants;
 import com.renny.contractgridview.bean.AppInfoBean;
+import com.renny.contractgridview.event.ItemEventListener;
 import com.renny.contractgridview.opreator.AppListOpreator;
 import com.renny.contractgridview.utils.AppUtils;
 import com.renny.contractgridview.utils.CommonUtil;
@@ -53,10 +55,8 @@ public class MainActivity extends AppCompatActivity {
         //EventBus.getDefault().register(this);
         initView();
         InitBlurView();
-        initEvent();
         initAdapter();
-
-
+        initEvent();
     }
 
     private void InitBlurView() {
@@ -148,23 +148,15 @@ public class MainActivity extends AppCompatActivity {
         }
         if (mAdapter != null) {
             mAdapter.setItemClickListener(new VerticalOverlayAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClik(View view, int position) {
-                    if (position != AppUtils.defaultApp.size() - 1) {
-                        AppUtils.LauncherActivity(MainActivity.this, AppUtils.defaultApp.get(position).getPackage_name());
-                    } else {
-                        //Toast.makeText(this, "menu", Toast.LENGTH_SHORT).show();
-                        sendBroadcast(new Intent(Constants.SET_VIEW_PAGER_ACTION));
-                    }
-                }
+                public  void onItemClick(View view, int position) {
+                    Toast.makeText(MainActivity.this, "position:"+position, Toast.LENGTH_SHORT).show();
 
+                }
+            });
+            mAdapter.setItemLongClickListener(new VerticalOverlayAdapter.OnItemLongClickListener() {
                 @Override
-                public void onItemLongClik(View view, int position) {
-                /*for (int i = 0; i < AppUtils.defaultApp.size()-1; i++) {
-                    AppUtils.defaultApp.get(i).setEditMode(true);
-                    //mAdapter.notifyItemChanged(i);
-                }*/
-                    //LogUtil.i("vv", "after:" + AppUtils.defaultApp.size(), 1);
+                public void onItemLongClick(View view, int position) {
+                    Toast.makeText(MainActivity.this, "position:"+position, Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -187,16 +179,20 @@ public class MainActivity extends AppCompatActivity {
         try {
             AppUtils.InitData(this, mHandle);
             //AppUtils.getAllAppInfo(this, mHandle,false);
-            //LogUtil.i("itemc ", "data size:" + data.size(), 0);
-            //LogUtil.i("itemc ", "default data size:" + AppUtils.defaultApp.size(), 0);
+            //LogUtil.i(Constant.ft, "data size:" + data.size(), 0);
+            LogUtil.i(Constants.ft, "default data size:" + AppUtils.defaultApp.size());
             OverlayLayoutManager layoutManager = new OverlayLayoutManager(OrientationHelper.VERTICAL, false);
+            LogUtil.i(Constants.ft, "000" );
             //layoutManager.setMeasuredDimension(getScreenWidth(this),getScreenHeight(this));
             mRecyclerView.setLayoutManager(layoutManager);
+            LogUtil.i(Constants.ft, "111" );
             //mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            LogUtil.i(Constants.ft, "set manager" );
             //mRecyclerView.setLayoutManager(new StackLayoutManager());
             mAdapter = new VerticalOverlayAdapter(AppUtils.defaultApp, AppUtils.defaultApp, mHandle, mRecyclerView,this);
             mAdapter.setHeadView();
             mRecyclerView.setAdapter(mAdapter);
+            LogUtil.i(Constants.ft, "set adapter" );
             mRecyclerView.setMinimumHeight(getScreenHeight(this));
 
 
@@ -207,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final Handler mHandle = new Handler(Looper.getMainLooper()) {
         public void handleMessage(Message msg) {
-            if (msg.what == Constants.msgWhat.OPEN_EDIT_MODE) {
+            if (msg.what == Constants.msgWhat.OPEN_EDITMODE_STATUS) {
                 editFlag = true;
                 btn_complete.setVisibility(View.VISIBLE);
                 btn_plus.setVisibility(View.VISIBLE);

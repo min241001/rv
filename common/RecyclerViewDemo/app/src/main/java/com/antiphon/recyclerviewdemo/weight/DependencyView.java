@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
  */
 public class DependencyView extends AppCompatTextView {
 
-    private int mTouchSlop;
+    private final int mTouchSlop;
     private float mLastY;
     private float mLastX;
 

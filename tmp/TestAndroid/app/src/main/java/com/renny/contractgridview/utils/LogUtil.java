@@ -2,6 +2,7 @@ package com.renny.contractgridview.utils;
 import android.util.Log;
 
 import com.renny.contractgridview.BuildConfig;
+import com.renny.contractgridview.base.Constants;
 
 //import com.renny.contractgridview.BuildConfig;
 
@@ -119,6 +120,15 @@ public class LogUtil {
         if (BuildConfig.DEBUG || type == TYPE_RELEASE) {
             Log.e(TAG, getDetailInfo() + msg, e);
         }
+    }    //
+    public static void i(String TAG, String msg) {
+        if (Constants.logFlag)
+            i(TAG, msg, 0);
+    }
+
+    public static void e(String TAG, String msg) {
+        if (Constants.logFlag)
+            e(TAG, msg, 0);
     }
 
     private static String getDetailInfo() {
