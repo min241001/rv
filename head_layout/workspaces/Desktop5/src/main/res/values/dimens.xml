@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_w">190dp</dimen>
+    <dimen name="menu_h">46dp</dimen>
+    <dimen name="_18dp">18dp</dimen>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_title_view"/>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:visibility="gone"
+        android:id="@+id/searched_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.launcher3.widget.RecyclerViewExtC
+            android:visibility="gone"
+            android:id="@+id/friends_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/reset_search"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:src="@mipmap/reset" />
+
+        <TextView
+            android:layout_marginTop="32dp"
+            android:textSize="25sp"
+            android:textColor="@color/fourE"
+            android:layout_width="wrap_content"
+            android:text="@string/click_reset"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

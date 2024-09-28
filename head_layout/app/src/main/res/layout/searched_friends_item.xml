@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="307dp"
+    android:layout_marginTop="9dp"
+    android:orientation="horizontal"
+    android:id="@+id/searched_friend_item_layout"
+    android:layout_marginStart="6dp"
+    android:background="@drawable/rectangle_black_three"
+    android:layout_height="94dp">
+
+    <com.android.launcher3.common.widget.CircleImageView
+        android:id="@+id/friend_avatar"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/icon_avatar"
+        android:layout_width="76dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:id="@+id/friend_name"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="27sp"/>
+
+        <ImageView
+            android:id="@+id/friend_ifFriend"
+            android:src="@mipmap/add_friend_icon"
+            android:layout_gravity="center"
+            android:layout_width="66dp"
+            android:scaleType="centerInside"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

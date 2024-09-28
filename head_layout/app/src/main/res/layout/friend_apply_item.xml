@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:layout_width="307dp"
+    android:background="@drawable/rectangle_black_three"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="155dp">
+
+    <com.android.launcher3.common.widget.CircleImageView
+        android:id="@+id/friend_apply_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/default_avatar_icon"
+        android:layout_width="76dp"
+        android:layout_height="76dp"/>
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:text="张建康"
+        android:singleLine="true"
+        android:id="@+id/friend_apply_name"
+        android:gravity="center"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:textSize="27sp"/>
+
+    <TextView
+        android:layout_below="@+id/friend_apply_name"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/_6D6D6D"
+        android:text="@string/apply_for_friend"
+        android:gravity="center"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:id="@+id/friend_apply_refuse"
+        android:textSize="24sp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:background="@drawable/refuse_red_circular"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:text="@string/refuse"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:id="@+id/friend_apply_accept"
+        android:textSize="24sp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:background="@drawable/cancel_orange_circular"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:text="@string/accept"/>
+
+</RelativeLayout>

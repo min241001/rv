@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingTop="15dp"
+    tools:context=".moudle.breathe.activity.BreatheAnimaActivity">
+
+    <TextView
+        android:id="@+id/tv_breathe_state"
+        android:text = "@string/breathe"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="130sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="35dp"
+        android:text="请保持放松"
+        android:textColor="#707070"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_breathe"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_breathe_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

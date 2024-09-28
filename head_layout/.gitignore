@@ -1,0 +1,14 @@
+out/
+*.log
+somefile.txt
+somedir/
+*.exe
+/.idea/
+/.gradle/
+.gradle/
+.idea/
+app/src/.DS_Store
+local.properties
+libraries/DroidPlugin/build/
+local.properties
+/Faces/*/build

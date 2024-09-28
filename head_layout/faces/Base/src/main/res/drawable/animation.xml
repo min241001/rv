@@ -1,0 +1,21 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/number_rotation_first" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_second" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_third" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_fourth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_fifth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_sixth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_seventh" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_eighth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_nineth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_tenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_eleventh" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_twelfth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_thirteenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_fourteenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_fifteenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_sixteenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_seventeenth" android:duration="88"/>
+    <item android:drawable="@drawable/number_rotation_eighteenth" android:duration="88"/>
+</animation-list>
