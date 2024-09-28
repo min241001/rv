@@ -1,0 +1,22 @@
+<resources>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="_333333">#333333</color>
+    <color name="_8E8E8E">#8E8E8E</color>
+    <color name="_6D6D6D">#6D6D6D</color>
+    <color name="_464646">#464646</color>
+    <color name="_FF921B">#FF921B</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_black">#FF000000</color>
+    <color name="color_app">#00000000</color>
+    <color name="blood_oxygen_red">#E50000</color>
+    <color name="blood_oxygen_yellow">#FDA700</color>
+    <color name="blood_oxygen_blue">#00A2FF</color>
+    <color name="blood_oxygen_green">#00FF24</color>
+    <color name="dark_grey">#a9a9a9</color>
+    <color name="_00fe18">#00FE18</color>
+</resources>

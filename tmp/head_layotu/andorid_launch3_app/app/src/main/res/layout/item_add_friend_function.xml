@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/margin_size_15"
+    android:layout_width="match_parent"
+    android:background="@drawable/rectangle_black_three"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.android.launcher3.common.widget.CircleImageView
+        android:src="@mipmap/add_friend"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="18dp"
+        android:id="@+id/iv_funcIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:text="搜索好友"
+        android:layout_marginStart="30dp"
+        android:id="@+id/iv_funcName"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_function_viability"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="21dp"
+        android:src="@mipmap/red_point"
+        android:layout_width="14dp"
+        android:layout_height="14dp"/>
+
+
+
+
+</LinearLayout>

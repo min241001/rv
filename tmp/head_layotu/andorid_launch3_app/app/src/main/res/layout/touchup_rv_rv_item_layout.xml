@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vertical_overlay_fragmeng_rv_item_o"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/vertical_overlay_fragmeng_rv_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_136dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:background="@drawable/bg_item_favorite"
+        android:elevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fav_item_rv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_136dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+    <!-- android:background="@drawable/bg_item_common".-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_128dp"
+        android:background="@android:color/transparent"
+        android:elevation="9dp">
+
+        <ImageView
+            android:id="@+id/item_card_rv_up2"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_set_top"
+            android:visibility="visible"></ImageView>
+
+        <ImageView
+            android:id="@+id/item_card_rv_null"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@null"
+            android:visibility="gone"></ImageView>
+    </RelativeLayout>
+</RelativeLayout>

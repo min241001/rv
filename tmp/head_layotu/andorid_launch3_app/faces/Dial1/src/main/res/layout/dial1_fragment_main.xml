@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:background="@drawable/animation"
+        android:id="@+id/frame_animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.android.launcher3.dial1.WatchDial1FaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_marginTop="76dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextClock
+            android:textSize="26sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:format12Hour="EE"
+            android:format24Hour="EE"
+            android:text="星期六" />
+        <TextClock
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:format12Hour="dd"
+            android:format24Hour="dd"
+            android:text="11" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/center_doit"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_20dp"
+            android:paddingTop="85dp"
+            android:paddingEnd="@dimen/_20dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_every"
+                    style="@style/style_checkbox"
+                    android:background="@drawable/bg_alarm_top"
+                    android:text="@string/alarm_everyday" />
+
+                <RadioButton
+                    android:id="@+id/rb_work"
+                    style="@style/style_checkbox"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/color_1d1e20"
+                    android:text="@string/alarm_workday" />
+
+                <RadioButton
+                    android:id="@+id/rb_week"
+                    style="@style/style_checkbox"
+                    android:background="@drawable/bg_alarm_bottom"
+                    android:text="@string/alarm_weekends" />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/cb_7"
+                style="@style/style_checkbox"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_alarm_top"
+                android:text="@string/alarm_sunday" />
+
+            <CheckBox
+                android:id="@+id/cb_1"
+                style="@style/style_checkbox"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/color_1d1e20"
+                android:text="@string/alarm_monday" />
+
+            <CheckBox
+                android:id="@+id/cb_2"
+                style="@style/style_checkbox"
+                android:background="@color/color_1d1e20"
+                android:button="@null"
+                android:checked="false"
+                android:drawableEnd="@drawable/checked_selector_alarm"
+                android:paddingStart="15dp"
+                android:paddingEnd="@dimen/_20dp"
+                android:text="@string/alarm_tuesday" />
+
+            <CheckBox
+                android:id="@+id/cb_3"
+                style="@style/style_checkbox"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/color_1d1e20"
+                android:text="@string/alarm_wednesday" />
+
+            <CheckBox
+                android:id="@+id/cb_4"
+                style="@style/style_checkbox"
+                android:background="@color/color_1d1e20"
+                android:text="@string/alarm_thursday" />
+
+            <CheckBox
+                android:id="@+id/cb_5"
+                style="@style/style_checkbox"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/color_1d1e20"
+                android:text="@string/alarm_friday" />
+
+            <CheckBox
+                android:id="@+id/cb_6"
+                style="@style/style_checkbox"
+                android:layout_marginBottom="@dimen/_50dp"
+                android:background="@drawable/bg_alarm_bottom"
+                android:text="@string/alarm_saturday" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.baehug.toputils.view.TitleRelativeLayout
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_title_bg="@mipmap/ic_alarm_back"
+        app:right_text_size="12sp"
+        app:right_title_text="重复"
+        app:scroll_enable="true"
+        app:shade_text_enable="false"
+        app:text_color="@color/color_ffb400" />
+
+</RelativeLayout>

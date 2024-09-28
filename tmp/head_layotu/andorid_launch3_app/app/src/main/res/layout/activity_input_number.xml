@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:padding="5dp"
+        android:src="@drawable/svg_3_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:gravity="center"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintBottom_toTopOf="@+id/zl_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="22dp"
+        android:format12Hour="a hh:mm"
+        android:format24Hour="HH:mm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="17:00" />
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_1"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_2"
+        app:layout_constraintEnd_toStartOf="@+id/zl_2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_2"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/zl_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_3"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zl_2">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_4"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_5"
+        app:layout_constraintEnd_toStartOf="@+id/zl_5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/btn4"
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_5"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/zl_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/btn5"
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_6"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zl_5">
+
+        <TextView
+            android:id="@+id/btn6"
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_7"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_8"
+        app:layout_constraintEnd_toStartOf="@+id/zl_8"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_8"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/zl_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_9"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zl_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zl_8">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_0"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_10"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/zl_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/zl_0">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*" />
+
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+    <com.baehug.callui.phone.view.ZoomableLayout
+        android:id="@+id/zl_11"
+        style="@style/dial_btn"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zl_0"
+        app:layout_constraintTop_toTopOf="@+id/zl_0">
+
+        <TextView
+            style="@style/dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#" />
+    </com.baehug.callui.phone.view.ZoomableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

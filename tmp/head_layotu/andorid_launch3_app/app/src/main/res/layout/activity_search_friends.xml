@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_title_view"/>
+
+    <TextView
+        android:maxLength="13"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/bg_theme"
+        android:id="@+id/search_number"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <TableLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/btn_one"
+                style="@style/button"
+                android:text="@string/one"/>
+            <Button
+                android:id="@+id/btn_two"
+                style="@style/margin_button"
+                android:text="@string/two"/>
+            <Button
+                android:id="@+id/btn_three"
+                style="@style/button"
+                android:text="@string/three"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/btn_four"
+                style="@style/button"
+                android:text="@string/four"/>
+            <Button
+                android:id="@+id/btn_five"
+                style="@style/margin_button"
+                android:text="@string/five"/>
+            <Button
+                android:id="@+id/btn_six"
+                style="@style/button"
+                android:text="@string/six"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/btn_seven"
+                style="@style/button"
+                android:text="@string/seven"/>
+            <Button
+                android:id="@+id/btn_eight"
+                style="@style/margin_button"
+                android:text="@string/eight"/>
+            <Button
+                android:id="@+id/btn_nine"
+                style="@style/button"
+                android:text="@string/nine"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/btn_ok"
+                android:textStyle="bold"
+                style="@style/button"
+                android:textColor="@color/_FF921B"
+                android:textSize="24sp"
+                android:text="@string/ok"/>
+            <Button
+                android:id="@+id/btn_zero"
+                style="@style/margin_button"
+                android:text="@string/zero"/>
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/btn_del"-->
+<!--                style="@style/button"-->
+<!--                android:src="@mipmap/delete" />-->
+
+            <RelativeLayout
+                android:id="@+id/btn_delete"
+                android:background="@drawable/rectangle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="one" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="4dp"
+                    android:src="@mipmap/delete" />
+
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

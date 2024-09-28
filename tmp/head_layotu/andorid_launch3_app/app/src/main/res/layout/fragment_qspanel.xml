@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <!--从左到右分别是蜂窝信号、网络类型、厂商类型、电量（进度图标+文字）-->
+    <LinearLayout
+        android:id="@+id/ll_status"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_pull_down_status_bar"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 蜂窝信号 -->
+        <ImageView
+            android:id="@+id/iv_signal"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:src="@drawable/svg_3_signal_4" />
+
+        <!-- 网络类型 -->
+        <TextView
+            android:id="@+id/tv_networkType"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- 厂商类型 -->
+        <TextView
+            android:id="@+id/tv_manufacturerType"
+            style="@style/white_text_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <!-- 无SIM卡 -->
+        <TextView
+            android:id="@+id/tv_simcard"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="无SIM卡"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- wifi信号 -->
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/svg_3_wifi_2" />
+
+        <!-- ble -->
+        <ImageView
+            android:id="@+id/iv_ble"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:src="@drawable/svg_status_ble_white"
+            android:visibility="gone" />
+
+        <!-- 静音 -->
+        <ImageView
+            android:id="@+id/iv_mute"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:src="@drawable/svg_3_status_mute_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_status" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/touchup_rv_item_child_music"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_136dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:visibility="gone">
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/tu_rv_music_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/tu_rv_music_iv1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_action_sort_by_size"
+            android:textColor="@color/text_color_default"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tu_rv_music_name_tv1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tu_rv_music_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="轻点以播放音乐"
+            android:textColor="@color/text_color_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp">
+            <ImageView
+                android:id="@+id/tu_rv_music_play"
+                android:src="@mipmap/icon_music_pause"
+                android:layout_centerInParent="true"
+                android:layout_width="60dip"
+                android:layout_height="50dip"></ImageView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
