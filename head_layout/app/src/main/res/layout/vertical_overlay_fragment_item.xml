@@ -41,7 +41,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="@dimen/_136dp"
+        android:layout_marginTop="@dimen/_15dp"
         android:layout_marginLeft="@dimen/_20dp"
         android:layout_marginRight="@dimen/_20dp">
 
@@ -49,6 +50,7 @@
             android:id="@+id/vertical_overlay_fragmeng_menu_item"
             android:layout_width="match_parent"
             android:layout_height="72dip"
+            android:layout_alignParentTop="true"
             android:visibility="gone"
             android:elevation="8dp"
             android:background="@drawable/bg_item_menu">

@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.common.constant.Constants;
 import com.android.launcher3.common.utils.LogUtil;
-import com.android.launcher3.moudle.touchup.utils.StringUtil;
+import com.android.launcher3.moudle.touchup.view.ViewInfo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -29,11 +31,11 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
     private static final String TAG = "Over";
 
     private @FloatRange(from = 0.01, to = 1.0)
-    float edgePercent = 0.12f;//触发边缘动画距离百分比
+    float edgePercent = 0.1f;//触发边缘动画距离百分比
 
     private @FloatRange(from = 1)
-    float slowTimes = 2;//到达此距离后放慢倍数
-    float layer_offset = 0.2f;//层距
+    float slowTimes = 1.60f;//到达此距离后放慢倍数
+    float layer_offset = 0.24f;//层距
 
     private int orientation = OrientationHelper.VERTICAL;
     private boolean offsetUseful = false;
@@ -82,12 +84,7 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
         }
         reset();
         detachAndScrapAttachedViews(recycler);
-        int index2 = getChildCount();
-        LogUtil.i(Constants.tm, "cc index2:" + index2);
-        LogUtil.i(Constants.tm, "cc height:" + viewHeight);
-        LogUtil.i(Constants.tm, "cc totalHeight):" + totalHeight);
-        //calculateChildrenSite(recycler, state);
-        CalcChildView(recycler, state, index2);
+        CalcChildView(recycler, state, getChildCount(), false);
     }
 
     private void reset() {
@@ -100,70 +97,60 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
         offsetUseful = false;
     }
 
-    private void CalcChildView(RecyclerView.Recycler recycler, RecyclerView.State state, int index) {
-        calculateChildrenSite(recycler, state, index);
+
+    private void CalcChildView(RecyclerView.Recycler recycler, RecyclerView.State state, int index, boolean flag) {
+
         if (orientation == OrientationHelper.VERTICAL) {
+            calculateChildrenSiteVertical(recycler, state, index, flag);
             addAndLayoutViewVertical(recycler, state, verticalScrollOffset);
         } else {
+            calculateChildrenSiteHorizontal(recycler, state, index);
             addAndLayoutViewHorizontal(recycler, state, horizontalScrollOffset);
         }
 
     }
 
-    public static List<ViewInfo> vlist = new ArrayList<ViewInfo>();
+    public static HashMap<Integer, ViewInfo> hs = new HashMap<Integer, ViewInfo>();
 
-    private void calculateChildrenSite(RecyclerView.Recycler recycler, RecyclerView.State state, int index) {
-        boolean flag = false;
-        if (vlist.size() > 0) {
-            for (int i = 0; i < vlist.size(); i++) {
-                if (vlist.get(i).position == index) {
-                    flag = true;
-                    ViewInfo vi = vlist.get(i);
-                    overDist = vi.overDist;
-                    //if (orientation == OrientationHelper.VERTICAL) {
-                    viewHeight = vi.height;
-                    totalHeight = vi.totalHeight;
-                    // }else {
-                    viewWidth = vi.width;
-                    totalWidth = vi.totalWidth;
-                    //}
-                }
+    private void calculateChildrenSiteVertical(RecyclerView.Recycler recycler, RecyclerView.State state, int index, boolean scrollFlag) {
+        if (!hs.isEmpty() && hs.containsKey(index)) {
+            ViewInfo vi = hs.get(index);
+            viewHeight = vi.height;
+            overDist = vi.overDist;
+            //overDist = (int) (viewHeight);
+            totalHeight = vi.totalHeight;
+        } else {
+            View view = recycler.getViewForPosition(index);
+            measureChildWithMargins(view, 0, 0);
+            calculateItemDecorationsForChild(view, new Rect());
+            viewHeight = getDecoratedMeasuredHeight(view);
+            overDist = (int) (slowTimes * viewHeight);
+            //overDist = (int) (viewHeight);
+            totalHeight = getItemCount() * viewHeight;//+getDecoratedMeasuredHeight(view0);
+            //Log.d(TAG, "childCountI = " + getChildCount() + "  itemCount= " + recycler.getScrapList().size());
+            ViewInfo vi = new ViewInfo();
+            vi.position = index;
+            vi.height = viewHeight;
+            vi.overDist = overDist;
+            vi.totalHeight = totalHeight;//+getDecoratedMeasuredHeight(view0);
+            if (!hs.containsKey(index)) {
+                hs.put(index, vi);
             }
-        }
-        LogUtil.i(Constants.tm, "vlist.size:" + vlist.size());
-        if (!flag) {
-            View view;
-           /* if(index!=0&&index<=3) {
-                index = 0;
-            }*/
-            if (index >= 0) {
-                view = recycler.getViewForPosition(index);
-                measureChildWithMargins(view, 0, 0);
-                calculateItemDecorationsForChild(view, new Rect());
-                ViewInfo vi = new ViewInfo();
-                vi.position = index;
-                // if (orientation == OrientationHelper.VERTICAL) {
-                viewHeight = getDecoratedMeasuredHeight(view);
-                overDist = (int) (slowTimes * viewHeight);
-                //overDist = (int) (viewHeight);
-                totalHeight = getItemCount() * viewHeight;//+getDecoratedMeasuredHeight(view0);
-                vi.height = viewHeight;
-                vi.totalHeight = totalHeight;//+getDecoratedMeasuredHeight(view0);
-                //}else{
-                viewWidth = getDecoratedMeasuredWidth(view);
-                overDist = (int) (slowTimes * viewWidth);
-                //overDist = (int) (viewHeight);
-                totalWidth = getItemCount() * viewWidth;//+getDecoratedMeasuredHeight(view0);
-                vi.width = viewWidth;
-                vi.totalWidth = totalWidth;//+getDecoratedMeasuredHeight(view0);
-                //}
-                vi.overDist = overDist;
-                //Log.d(TAG, "childCountI = " + getChildCount() + "  itemCount= " + recycler.getScrapList().size());
-                vlist.add(vi);
-            }
+
         }
     }
 
+    private void calculateChildrenSiteHorizontal(RecyclerView.Recycler recycler, RecyclerView.State state, int index) {
+        LogUtil.i(Constants.tm, "calculateChildrenSiteHorizontal");
+        View view = recycler.getViewForPosition(index);
+        measureChildWithMargins(view, 0, 0);
+        calculateItemDecorationsForChild(view, new Rect());
+        viewWidth = getDecoratedMeasuredWidth(view);
+        overDist = (int) (slowTimes * viewWidth);
+        //overDist =  viewWidth;
+        totalWidth = getItemCount() * viewWidth;
+        //Log.d(TAG, "childCountI = " + getChildCount() + "  itemCount= " + recycler.getScrapList().size());
+    }
 
     @Override
     public boolean canScrollHorizontally() {
@@ -193,19 +180,12 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
         super.scrollVerticallyBy(dy, recycler, state);
         //列表向下滚动dy为正，列表向上滚动dy为负，这点与Android坐标系保持一致。
         int tempDy = dy;
-        int index = getItemCount();
-        int index2 = getChildCount() - 1;
-
-        LogUtil.i(Constants.tm, "index:" + index);
-        LogUtil.i(Constants.tm, "index2:" + index2);
-        LogUtil.i(Constants.tm, "dy:" + dy);
-        LogUtil.i(Constants.tm, "height:" + viewHeight);
-        LogUtil.i(Constants.tm, "totalHeight):" + totalHeight);
-        if (dy > 0 && index2 < 4) {
-
-        } else {
-            CalcChildView(recycler, state, index2);
-        }
+        //int index = getItemCount()-(getChildCount() - 1);
+        int index = getChildCount() - 1;
+        LogUtil.i(Constants.tm, "index:" + index + "   dy:" + dy);
+        LogUtil.i(Constants.tm, "height:" + viewHeight + "   totalHeight:" + totalHeight);
+        CalcChildView(recycler, state, index, true);
+        ////calculateChildrenSite(recycler, state);
         if (verticalScrollOffset <= totalHeight - getVerticalSpace()) {
             verticalScrollOffset += dy;
             horizontalScrollOffset += dy;
@@ -245,53 +225,76 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
 
     }
 
+    public static HashMap<Integer, ViewInfo> hv = new HashMap<Integer, ViewInfo>();
+
     private void addAndLayoutViewVertical(RecyclerView.Recycler recycler, RecyclerView.State state, int offset) {
+
         int itemCount = getItemCount();
         if (itemCount <= 0 || state.isPreLayout()) {
             return;
         }
-        int displayHeight = getVerticalSpace();
+        int displayHeight = getVerticalSpace(0);
         //float percent = 1 - edgePercent;
         float scale = 1.0f;
         float alpha = 1.0f;
         float interval = 0.0f;
         float interval2 = 0.0f;
+        View view0 = recycler.getViewForPosition(0);
+        measureChildWithMargins(view0, 0, 0); // 通知测量view的margin值
+        //调用这个方法能够调整ItemView的大小，以除去ItemDecorator。
+        calculateItemDecorationsForChild(view0, new Rect());
+        int width0 = getDecoratedMeasuredWidth(view0); // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
+        int height0 = getDecoratedMeasuredHeight(view0);
         for (int i = itemCount - 1; i >= 0; i--) {
+            int width = 0; // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
+            int height = 0;
+            int tHeight = 0;
+            int tod = 0;
+            View view;
+            if (hv.containsKey(i)) {
+                ViewInfo vi = hv.get(i);
+                width = vi.width;
+                height = vi.height;
+                tHeight = vi.totalHeight;
+                tod = vi.overDist;
+                view = vi.v;
+                //// view = recycler.getViewForPosition(i);
+            } else {
+                view = recycler.getViewForPosition(i);
+                measureChildWithMargins(view, 0, 0); // 通知测量view的margin值
+                //调用这个方法能够调整ItemView的大小，以除去ItemDecorator。
+                calculateItemDecorationsForChild(view, new Rect());
+                width = getDecoratedMeasuredWidth(view); // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
+                height = getDecoratedMeasuredHeight(view);
+                tod = (int) (slowTimes * viewHeight);
+                ViewInfo vi = new ViewInfo();
+                vi.position = i;
+                vi.height = height;
+                vi.width = width;
+                vi.overDist = tod;
+                //vi.totalHeight = tHeight;//+getDecoratedMeasuredHeight(view0);
+                vi.totalHeight = height * (i) + height0;
+                if (i == 0) {
+                    // vi.totalHeight = height0;
+                }
+                tHeight = vi.totalHeight;
+                vi.v = view;
+                hv.put(i, vi);
+            }
             // 遍历Recycler中保存的View取出来
-            int bottomOffset = (i + 1) * viewHeight - offset;
-            int topOffset = i * viewHeight - offset;
+            int bottomOffset = height * (i) + height0 - offset;
+            int topOffset = (i - 1) * height + height0 - offset;
             boolean needAdd = true;
-            if (bottomOffset - displayHeight >= overDist) {
+            if (bottomOffset - displayHeight >= tod) {
                 needAdd = false;
             }
-            if (topOffset < -overDist && i != 0 && topOver
-                    || topOffset < -overDist && !topOver) {
+            if (topOffset < -tod && i != 0 && topOver
+                    || topOffset < -tod && !topOver) {
                 needAdd = false;
             }
 
             if (needAdd) {
-                View view = recycler.getViewForPosition(i);
                 addView(view); // 因为刚刚进行了detach操作，所以现在可以重新添加
-
-                /*measureChildWithMargins(view, 0, 0); // 通知测量view的margin值
-                int width = getDecoratedMeasuredWidth(view); // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
-                int height = getDecoratedMeasuredHeight(view);
-                //调用这个方法能够调整ItemView的大小，以除去ItemDecorator。
-                calculateItemDecorationsForChild(view, new Rect());*/
-                int width = 0;
-                int height = 0;
-                /*if (vlist.size() > i) {
-                    calculateChildrenSite(recycler, state, i);
-                    width = vlist.get(i).width;
-                    height = vlist.get(i).height;
-                } else {*/
-                    measureChildWithMargins(view, 0, 0); // 通知测量view的margin值
-                    width = getDecoratedMeasuredWidth(view); // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
-                    height = getDecoratedMeasuredHeight(view);
-                    //调用这个方法能够调整ItemView的大小，以除去ItemDecorator。
-                    calculateItemDecorationsForChild(view, new Rect());
-               // }
-
                 view.setScaleX(scale);
                 view.setScaleY(scale);
                 view.setAlpha(alpha);
@@ -331,7 +334,8 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
                         view.setScaleX(1.0f);
                     }
                 } else {
-                    realBottomOffset = totalHeight > displayHeight ? displayHeight : totalHeight;
+                    realBottomOffset = tHeight > displayHeight ? displayHeight : tHeight;
+                    //realBottomOffset = tHeight;
                     if (i == itemCount - 1) {
                         adjustScale(view, scale, alpha, slowTimes, getChildCount(), i, false);
                     } else {
@@ -345,10 +349,12 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
     }
 
     private void adjustScale(View itemView, float scale, float alpha, float slowTimes, int ChildCount, int i, boolean flag) {
+        LogUtil.i("oscale", "ChildCount = " + ChildCount + "  i " + i);
         scale = 1.0f;
         alpha = 1.0f;
-        scale += (ChildCount - 4) * 0.1f;
-        alpha += (ChildCount - 4) * 0.15f;
+        scale += (ChildCount - 3) * 0.15f;
+        alpha += (ChildCount - 3) * 0.20f;
+
         if (scale > 0.8f) {
             //scale = 1.0f;
         }
@@ -442,6 +448,11 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
     private int getVerticalSpace() {
         // 计算RecyclerView的可用高度，除去上下Padding值
         return getHeight() - getPaddingBottom() - getPaddingTop();
+    }
+
+    private int getVerticalSpace(int height) {
+        // 计算RecyclerView的可用高度，除去上下Padding值
+        return getHeight() - getPaddingBottom() - getPaddingTop() + 45;//+120
     }
 
 

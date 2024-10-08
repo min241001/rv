@@ -3,7 +3,7 @@
     android:id="@+id/tuef_head_layout"
     android:layout_width="match_parent"
     android:layout_height="@dimen/touchup_event_head_height"
-    android:layout_marginBottom="@dimen/_15dp">
+    android:layout_marginBottom="@dimen/_10dp">
 
     <TextView
         android:id="@+id/tf_tv_date"

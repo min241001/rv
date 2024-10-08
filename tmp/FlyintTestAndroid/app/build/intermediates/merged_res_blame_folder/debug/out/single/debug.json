@@ -1,0 +1,478 @@
+[
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_hollow_circle2.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\hollow_circle2.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_clock_minute.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_clock_minute.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_item_plus.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_item_plus.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_stop_watch_pointer_big.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\stop_watch_pointer_big.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_bg_white.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\tab_bg_white.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_delete.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\delete.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_plus.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_plus.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_content_new52.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\content_new52.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_head_view.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\layout_head_view.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_plus36.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_plus36.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_vertical_fragment.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_vertical_fragment.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_clock_second.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_clock_second.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_pb_battery_low.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\pb_battery_low.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_finish.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_finish.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_vertical_fragment3.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_vertical_fragment3.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_clock_hour.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_clock_hour.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_integral.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_integral.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_lyf.jpeg.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\lyf.jpeg"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_illustration_full_bleed_do.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\illustration_full_bleed_do.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_clear_input_context.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_clear_input_context.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_menu.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_menu.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_theme.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_theme.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_diamond.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_diamond.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_stop_watch_pointer.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\stop_watch_pointer.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_plus.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_plus.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_shadows_do.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\shadows_do.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_item_menu.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_item_menu.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_hollow_circle.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\hollow_circle.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_vertical_fragment2.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_vertical_fragment2.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_pull_down_blue.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_pull_down_blue.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_second.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\second.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_overlay_vertical_item_top.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_overlay_vertical_item_top.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape_circle.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\shape_circle.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_set_top.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_set_top.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_make_friends.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_make_friends.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\anim_dialog_out.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\anim\\dialog_out.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_setting_list_item.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_setting_list_item.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_vertical_overlay_fragment.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\vertical_overlay_fragment.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_action_sort_by_size.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_sort_by_size.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_item_plus2.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_item_plus2.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_back.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_back.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_dialer.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_dialer.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_brand_adaptation_shape.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\brand_adaptation_shape.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_diamond.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\icon_diamond.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_clock.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_clock.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg1.webp.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg1.webp"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_del.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_del.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_island_icon.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_island_icon.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_material.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_material.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_pull_down_red.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_pull_down_red.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_edit_text_gay.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_edit_text_gay.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_buy_qrcode.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_buy_qrcode.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_timer.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_timer.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_message.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_message.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_temperature_2.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\temperature_2.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_vertical_overlay_fragment_item.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\vertical_overlay_fragment_item.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_popular_recommend.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_popular_recommend.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_full_space_do.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\full_space_do.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_text_dotted_line.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_text_dotted_line.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_bg_gay.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\tab_bg_gay.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_switch_btn_bg_white.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\switch_btn_bg_white.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_background.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_fragment.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\activity_fragment.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_stopwatch_line.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_stopwatch_line.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_vertical_overlay_fragment_gv_item.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\vertical_overlay_fragment_gv_item.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_stopwatch_dots_grey.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_stopwatch_dots_grey.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_background.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_head.jpeg.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_head.jpeg"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_start.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_start.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_temperature_3.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\temperature_3.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_contacts.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_contacts.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_avatar.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\icon_avatar.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_resetting.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_resetting.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_content_new5.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\content_new5.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_diamond_count.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_diamond_count.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_switch_btn_bg_green.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\switch_btn_bg_green.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_corner_radius_do.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\corner_radius_do.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_island_common.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_island_common.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_pause.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_pause.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_stopwatch_dots.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_stopwatch_dots.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_pull_down_default.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_pull_down_default.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_test_hint.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_test_hint.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_progress_bar.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\progress_bar.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\anim_dialog_enter.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\anim\\dialog_enter.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_item_common.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_item_common.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_shape_music.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_shape_music.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_gaussian_blur.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_gaussian_blur.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_stop_watch_oval.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\stop_watch_oval.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_temperature_1.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\temperature_1.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_alarm_clock.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_alarm_clock.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\layout_head_banner.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\layout\\head_banner.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_plus42.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_plus42.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_flower.jpg.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\flower.jpg"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_count.png.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\mipmap-hdpi\\icon_count.png"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_banner1.jpg.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_banner1.jpg"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_vertical_fragment_button.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\vertical_fragment_button.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_item_favorite.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_item_favorite.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_pb_battery_normal.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\pb_battery_normal.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_pull_down_status_bar.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_pull_down_status_bar.xml"
+    },
+    {
+        "merged": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_thumb.xml.flat",
+        "source": "G:\\repo\\rv\\1001\\tmp\\FlyintTestAndroid\\app\\src\\main\\res\\drawable\\bg_thumb.xml"
+    }
+]
