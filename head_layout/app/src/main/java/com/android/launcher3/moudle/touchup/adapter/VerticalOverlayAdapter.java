@@ -3,6 +3,7 @@ package com.android.launcher3.moudle.touchup.adapter;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.SparseArray;
 import android.view.View;
@@ -265,12 +266,13 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             mViewHolder viewHolder = (mViewHolder) holder;
             String date = DateFormat.format("EEEE \nMM月 \ndd ", System.currentTimeMillis()).toString();
             //viewHolder.tv_date.setText(date);
-        }
-        {//普通类型ViewHolder
+        }else{//普通类型ViewHolder
             mViewHolder viewHolder = (mViewHolder) holder;
-            if (beans.get(position).getType() != -1) {
-                try {
+            //if (beans.get(position).getType() != 0) {
+                //try {
+                if(viewHolder.app_name!=null) {
                     viewHolder.app_name.setText(beans.get(position).getApp_name());
+                }
                     viewHolder.textView2.setText(context.getString(R.string.all_apps));
                     viewHolder.textView2.setTextColor(context.getResources().getColor(R.color.text_color_default));
                     viewHolder.app_icon.setImageDrawable(AppUtils.getAppIcon(context, beans.get(position).getPackage_name()));
@@ -436,10 +438,10 @@ public class VerticalOverlayAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                         }
                     });
                     favoriteAdapter = CommonUtil.InitFavRecyclerView(viewHolder.fav_item_rv, fav_beans, launcher, context, mHandler);
-                }catch(Exception e){
+                /*}catch(Exception e){
                     LogUtil.e(TAG,"e:"+e);
-                }
-            }
+                }*/
+           // }
         }
 
         onViewRecycled(holder);

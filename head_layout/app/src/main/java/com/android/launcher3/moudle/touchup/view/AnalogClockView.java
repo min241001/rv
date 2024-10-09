@@ -101,17 +101,12 @@ public class AnalogClockView extends View {
         onTimeChanged();
         initSecondsThread();
     }
-
     private void initSecondsThread() {
-        secondsMsg = mHandler.obtainMessage(SECONDS_FLAG);
         Thread newThread = new Thread() {
             @Override
             public void run() {
                 while (mAttached) {
-                    // 如果这个消息不重新获取的话，
-                    // 会抛一个this message is already in use 的异常
-                    secondsMsg = mHandler.obtainMessage(SECONDS_FLAG);
-                    mHandler.sendMessage(secondsMsg);
+                    mHandler.sendEmptyMessage(SECONDS_FLAG);
                     try {
                         sleep(1000);
                     } catch (InterruptedException e) {

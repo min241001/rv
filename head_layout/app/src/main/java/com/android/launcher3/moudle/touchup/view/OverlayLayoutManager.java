@@ -245,6 +245,7 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
         calculateItemDecorationsForChild(view0, new Rect());
         int width0 = getDecoratedMeasuredWidth(view0); // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
         int height0 = getDecoratedMeasuredHeight(view0);
+        removeAllViews();
         for (int i = itemCount - 1; i >= 0; i--) {
             int width = 0; // 计算view实际大小，包括了ItemDecorator中设置的偏移量。
             int height = 0;
@@ -279,6 +280,7 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
                 }
                 tHeight = vi.totalHeight;
                 vi.v = view;
+                removeView(vi.v);
                 hv.put(i, vi);
             }
             // 遍历Recycler中保存的View取出来
@@ -294,6 +296,9 @@ public class OverlayLayoutManager extends RecyclerView.LayoutManager {
             }
 
             if (needAdd) {
+                /*if(recycler.getViewForPosition(i)!=null) {
+                    removeView(view);
+                }*/
                 addView(view); // 因为刚刚进行了detach操作，所以现在可以重新添加
                 view.setScaleX(scale);
                 view.setScaleY(scale);
