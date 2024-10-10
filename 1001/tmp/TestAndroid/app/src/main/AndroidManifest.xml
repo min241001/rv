@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.renny.contractgridview">
+    package="com.android.launcher3">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/illustration_full_bleed_do"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".FragmentActivity"
             android:exported="true"
             tools:ignore="ExtraText">
             <intent-filter>
@@ -19,6 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".moudle.touchup.activity.AppListActivity"
+            android:exported="false"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".moudle.touchup.activity.AppDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".moudle.touchup.activity.AppFavoriteDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTask"></activity>
     </application>
 
 </manifest>

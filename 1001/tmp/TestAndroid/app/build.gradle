@@ -55,6 +55,8 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.core:core:1.7.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.Dimezis:BlurView:version-2.0.5'
     //implementation 'org.greenrobot:eventbus:3.2.0'
 }

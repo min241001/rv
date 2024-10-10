@@ -4,28 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-    <!--android:background="@mipmap/flower"-->
+    android:background="@android:color/transparent">
 
     <eightbitlab.com.blurview.BlurView
         android:id="@+id/vof_blur_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
         app:blurOverlayColor="@color/colorOverlay5">
 
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vertical_overlay_rv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/vertical_overlay_rv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_30dp"
-               />
-            <!-- android:focusable="false"
-                android:focusableInTouchMode="false" -->
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:nestedScrollingEnabled="false" />
     </eightbitlab.com.blurview.BlurView>
 
     <RelativeLayout

@@ -2,4 +2,20 @@
     <string name="app_name">Min</string>
     <string name="complete">完成</string>
     <string name="all_apps">所有App</string>
+    <string name="setting_packageName">com.baehug.settings</string>
+    <string name="no_network">暂无网络哦~</string>
+    <string name="app_duplication">App已存在于列表</string>
+    <string name="fav_apps">精选</string>
+    <string name="shutdown">关机</string>
+    <string name="reboot">重启</string>
+    <string name="timer_app_name">计时器</string>
+    <string name="timer_recently_used">最近使用</string>
+    <string name="timer_all_timer">所有计时器</string>
+    <string name="timer_edit">编辑</string>
+    <string name="timer_hour">小时</string>
+    <string name="timer_minute">分钟</string>
+    <string name="timer_second">秒</string>
+    <string name="timer_start">开始</string>
+    <string name="timer_no_activity">无活跃计时器</string>
+    <string name="timer_minutes_30">30分钟</string>
 </resources>

@@ -3,189 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_gravity="center_horizontal"
     android:background="@android:color/transparent">
 
     <RelativeLayout
         android:id="@+id/vertical_overlay_item_plus_o"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/_136dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:background="@drawable/bg_app_item"
         android:orientation="horizontal"
         android:visibility="gone">
 
         <RelativeLayout
             android:id="@+id/vertical_overlay_item_plus"
             android:layout_width="match_parent"
-            android:layout_height="136dp"
+            android:layout_height="@dimen/_136dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/button_background"
             android:elevation="8dp">
 
             <ImageView
                 android:id="@+id/vertical_overlay_item_plus_iv"
-                android:layout_width="72dip"
-                android:layout_height="72dip"
+                android:layout_width="42dip"
+                android:layout_height="42dip"
                 android:layout_centerInParent="true"
-                android:background="@drawable/bg_plus"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/content_new52" />
+                android:src="@mipmap/ic_plus42" />
+            <!--  android:background="@drawable/bg_plus"-->
         </RelativeLayout>
     </RelativeLayout>
-<!-- default-->
-    <RelativeLayout
-        android:id="@+id/item_card_rl_o"
-        android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:visibility="gone">
 
-        <RelativeLayout
-            android:id="@+id/item_card_rl"
-            android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/bg_vertical_fragment3"
-            android:elevation="8dp">
-
-            <ImageView
-                android:id="@+id/app_icon"
-                android:layout_width="48dip"
-                android:layout_height="48dip"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="30dip"
-                android:scaleType="fitCenter" />
-
-            <TextView
-                android:id="@+id/app_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="12dip"
-                android:layout_toRightOf="@+id/app_icon"
-                android:textColor="@color/text_color_default"
-                android:textSize="26sp" />
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/item_card_rv_del"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:layout_alignParentLeft="true"
-            android:src="@mipmap/ic_clear_input_context"
-            android:visibility="gone"></ImageView>
-
-        <ImageView
-            android:id="@+id/item_card_rv_up"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:layout_alignParentRight="true"
-            android:src="@mipmap/ic_overlay_vertical_item_top"
-            android:visibility="gone"></ImageView>
-
-        <!--android:visibility="gone"-->
-    </RelativeLayout>
-    <!--00002-->
-
+    <include layout="@layout/touchup_rv_default_item_layout" />
+    <include layout="@layout/touchup_rv_rv_item_layout" />
 
     <RelativeLayout
-        android:id="@+id/item_card_rl3_o"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <RelativeLayout
-            android:id="@+id/item_card_rl3"
-            android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/bg_vertical_fragment3"
-            android:elevation="8dp"
-            android:gravity="center">
-
-            <GridView
-                android:id="@+id/item_gv"
-                android:layout_width="match_parent"
-                android:layout_height="84dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dip"
-                android:layout_marginLeft="20dip"
-                android:background="@drawable/bg_vertical_fragment3"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:gravity="center"
-                android:numColumns="3"></GridView>
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/item_card_rv_del2"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:layout_alignParentLeft="true"
-            android:src="@mipmap/ic_overlay_vertical_item_top"
-            android:visibility="gone"></ImageView>
-
-        <ImageView
-            android:id="@+id/item_card_rv_up2"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:layout_alignParentRight="true"
-            android:src="@null"
-            android:visibility="gone"></ImageView>
-
-    </RelativeLayout>
-    <!--0003-->
-    <RelativeLayout
-        android:id="@+id/item_card_rl2_o"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_gravity="top"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp"
-        android:elevation="8dp"
-        android:visibility="gone">
+        android:layout_height="@dimen/_136dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp">
 
         <LinearLayout
+            android:id="@+id/vertical_overlay_fragmeng_menu_item"
             android:layout_width="match_parent"
             android:layout_height="72dip"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="top"
-            android:background="@drawable/bg_vertical_fragment2">
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:elevation="8dp"
+            android:background="@drawable/bg_item_menu">
+            <!--          android:layout_alignParentTop="true"-->
 
             <ImageView
-                android:id="@+id/vertical_overlay_iv_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="90dip"
-                android:src="@mipmap/ic_popular_recommend"></ImageView>
+                android:layout_marginLeft="60dip"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_menu"></ImageView>
 
             <TextView
                 android:id="@+id/info_text2"
@@ -193,9 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="22dip"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
-
-
 </FrameLayout>

@@ -9,9 +9,14 @@
     <dimen name="_7dp">7dp</dimen>
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_10dp">10dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
     <dimen name="_20dp">20dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
     <dimen name="_30dp">30dp</dimen>
+    <dimen name="_35dp">35dp</dimen>
     <dimen name="_50dp">50dp</dimen>
+    <dimen name="_18dp">18dp</dimen>
+    <dimen name="_14dp">18dp</dimen>
     <dimen name="_100dp">100dp</dimen>
     <dimen name="_120dp">120dp</dimen>
     <dimen name="_128dp">128dp</dimen>
@@ -20,6 +25,7 @@
     <dimen name="d24">24dp</dimen>
     <dimen name="d28">28dp</dimen>
     <dimen name="d30">30dp</dimen>
+    <dimen name="touchup_event_head_height">190dp</dimen>
 
     <!--  字号大小根据尺寸为320*379，密度为120的手表计算得出，请勿修改  -->
     <dimen name="_32sp">24sp</dimen>
