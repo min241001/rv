@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/touchup_rv_item_child_sport"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_136dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tu_rv_sport_tv1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_default"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tu_rv_sport_tv2"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tu_rv_sport_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_color_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

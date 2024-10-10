@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg_alarm_item"
+    android:paddingStart="25dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@id/switch_compat"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/color_d6d6d6"
+        android:textSize="23sp"
+        tools:text="闹钟" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/switch_compat"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        tools:text="上午08:00" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_compat"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:paddingEnd="20dp"
+        android:thumb="@drawable/bg_alarm_white"
+        app:switchMinWidth="40dp"
+        app:track="@drawable/bg_alarm_track" />
+
+</RelativeLayout>

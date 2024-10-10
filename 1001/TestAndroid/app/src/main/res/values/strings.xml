@@ -1,0 +1,310 @@
+<resources>
+    <string name="app_name">Min</string>
+        <string name="title_activity_main_acitivity">MainAcitivity</string>
+        <string name="dummy_button">Dummy Button</string>
+        <string name="dummy_content">DUMMY\nCONTENT</string>
+        <string name="message">Watch face tapped</string>
+        <string name="my_analog_name">My Analog</string>
+        <string name="next">Next</string>
+        <string name="previous">Previous</string>
+
+        <string name="service_name">消息通知监听服务</string>
+        <string name="str_notification_clean">全部清除</string>
+        <string name="str_notification_none">没有通知</string>
+        <string name="app_forbidden_in_class">上课禁用时间,要专心学习哦~</string>
+        <string name="app_forbidden">应用已被家长禁用</string>
+        <string name="please_insert_sim_card">请插入SIM卡</string>
+        <string name="make_friends">碰碰交友</string>
+        <string name="search_friends">搜索好友</string>
+        <string name="friends_request">好友申请</string>
+        <string name="no_waAcctId">无账号</string>
+        <string name="check_tel">请输入手机号</string>
+        <string name="new_friends">新的好友</string>
+        <string name="enter_phone_number">输入手机号</string>
+        <string name="search_fail">搜索失败</string>
+        <string name="calendar_month">%d月%d日</string>
+        <string name="calendar_year">%d年%d月</string>
+        <string name="lunar_month">农历%s%s</string>
+        <string name="lunar_year">%s年</string>
+        <string name="searched_friends">搜索到的好友</string>
+        <string name="telephone_no_register">该好友未注册</string>
+        <string name="no_find_friends">未找到附近的好友哦</string>
+        <string name="wait_agree">已发送申请等待对方同意</string>
+        <string name="alarm_max_hint">添加闹钟数量已达上限</string>
+        <string name="widget_wifi">WIFI</string>
+        <string name="widget_net">蜂窝网络</string>
+        <string name="widget_bluetooth">蓝牙</string>
+        <string name="widget_add">添加</string>
+        <string name="widget_lock">锁屏</string>
+        <string name="widget_alarm">闹钟</string>
+        <string name="widget_alipay">支付宝</string>
+        <string name="widget_volume">声音</string>
+        <string name="widget_setting">设置</string>
+        <string name="widget_sleep">睡眠</string>
+        <string name="widget_star">标星</string>
+        <string name="count_time_text">计次</string>
+
+        <string-array name="month">
+            <item>一月</item>
+            <item>二月</item>
+            <item>三月</item>
+            <item>四月</item>
+            <item>五月</item>
+            <item>六月</item>
+            <item>七月</item>
+            <item>八月</item>
+            <item>九月</item>
+            <item>十月</item>
+            <item>十一月</item>
+            <item>十二月</item>
+        </string-array>
+
+        <string-array name="week">
+            <item>周日</item>
+            <item>周一</item>
+            <item>周二</item>
+            <item>周三</item>
+            <item>周四</item>
+            <item>周五</item>
+            <item>周六</item>
+        </string-array>
+
+        <string-array name="lunar_month">
+            <item>正月</item>
+            <item>二月</item>
+            <item>三月</item>
+            <item>四月</item>
+            <item>五月</item>
+            <item>六月</item>
+            <item>七月</item>
+            <item>八月</item>
+            <item>九月</item>
+            <item>十月</item>
+            <item>冬月</item>
+            <item>腊月</item>
+        </string-array>
+
+        <string-array name="lunar_str">
+            <item>初一</item>
+            <item>初二</item>
+            <item>初三</item>
+            <item>初四</item>
+            <item>初五</item>
+            <item>初六</item>
+            <item>初七</item>
+            <item>初八</item>
+            <item>初九</item>
+            <item>初十</item>
+            <item>十一</item>
+            <item>十二</item>
+            <item>十三</item>
+            <item>十四</item>
+            <item>十五</item>
+            <item>十六</item>
+            <item>十七</item>
+            <item>十八</item>
+            <item>十九</item>
+            <item>二十</item>
+            <item>廿一</item>
+            <item>廿二</item>
+            <item>廿三</item>
+            <item>廿四</item>
+            <item>廿五</item>
+            <item>廿六</item>
+            <item>廿七</item>
+            <item>廿八</item>
+            <item>廿九</item>
+            <item>三十</item>
+        </string-array>
+
+        <string name="sun">日</string>
+        <string name="mon">一</string>
+        <string name="tue">二</string>
+        <string name="wed">三</string>
+        <string name="thu">四</string>
+        <string name="fri">五</string>
+        <string name="sat">六</string>
+
+        <string-array name="week_string_array">
+            <item>日</item>
+            <item>一</item>
+            <item>二</item>
+            <item>三</item>
+            <item>四</item>
+            <item>五</item>
+            <item>六</item>
+        </string-array>
+
+        <string-array name="year_view_week_string_array">
+            <item>S</item>
+            <item>M</item>
+            <item>T</item>
+            <item>W</item>
+            <item>T</item>
+            <item>F</item>
+            <item>S</item>
+        </string-array>
+
+        <string-array name="month_string_array">
+            <item>JAN</item>
+            <item>FEB</item>
+            <item>MAR</item>
+            <item>APR</item>
+            <item>MAY</item>
+            <item>JUN</item>
+            <item>JUL</item>
+            <item>AUG</item>
+            <item>SEP</item>
+            <item>OCT</item>
+            <item>NOV</item>
+            <item>DEC</item>
+        </string-array>
+
+        <string-array name="trunk_string_array">
+            <item>辛</item>
+            <item>壬</item>
+            <item>癸</item>
+            <item>甲</item>
+            <item>乙</item>
+            <item>丙</item>
+            <item>丁</item>
+            <item>戊</item>
+            <item>己</item>
+            <item>庚</item>
+        </string-array>
+
+        <string-array name="branch_string_array">
+            <item>酉</item>
+            <item>戌</item>
+            <item>亥</item>
+            <item>子</item>
+            <item>丑</item>
+            <item>寅</item>
+            <item>卯</item>
+            <item>辰</item>
+            <item>巳</item>
+            <item>午</item>
+            <item>未</item>
+            <item>申</item>
+        </string-array>
+
+        <!--下拉控件-->
+        <integer-array name="widget">
+            <item>@array/widget_name</item>
+        </integer-array>
+
+        <string-array name="widget_name">
+            <item>WIFI</item>
+            <item>蜂窝网络</item>
+            <item>蓝牙</item>
+            <item>添加</item>
+            <item>锁屏</item>
+            <item>风格</item>
+            <item>开关</item>
+            <item>模式</item><!--白天/夜间-->
+            <item>支付宝</item>
+            <item>闹钟</item>
+            <item>设置</item>
+        </string-array>
+
+        <string name="exit">退出</string>
+        <string name="super_power">超级省电中%1$d%%</string>
+        <string name="shutdown_dialog_title">是否确认关机</string>
+        <string name="record_title">录音</string>
+        <string name="select_all">全选</string>
+        <string name="select_cancel_all">取消全选</string>
+        <string name="record_list">列表</string>
+        <string name="cancel">取消</string>
+        <string name="record_not">暂无录音</string>
+        <string name="edit">编辑</string>
+        <string name="delete">删除</string>
+        <string name="delete_success">删除成功</string>
+        <string name="save_success">保存成功</string>
+        <string name="breathe">呼吸</string>
+        <string name="breathe_setting">呼吸设置</string>
+        <string name="breathe_rhythm">呼吸节奏</string>
+        <string name="breathe_duration">呼吸时长</string>
+        <string name="breathe_shock">呼吸触感</string>
+        <string name="start_now">点击开始</string>
+        <string name="save">保存</string>
+        <string name="save_record_save_remind">是否保存此录音？</string>
+        <string name="save_record_delete_remind">是否删除？</string>
+        <string name="blood_xygen_describe">血氧饱和度(SaO2)是血液中被氧结合的氧合血红蛋白(HbO2）的容量占全部可结合的血红蛋白(Hb , hemoglobin)容量的百分比 ，即血液中血氧的浓度它是呼吸循环的重要生理参数。而功能性氧饱和度为HbO2浓度与HbO2+Hb浓度之比，有别于氧合血红蛋白所占百分数。因些监测动脉血氧饱和度(SaO2)可以对肺的氧合和血红蛋白携氧饱和度为95%以上。</string>
+        <string name="blood_pressure_describe">血压( blood pressure , BP )是指血液在血管内流动时作用于单位面积血管壁的侧压力它是推动血液在血管内流动的动力。在不同血管内被分别称为动脉血压、毛细血管压和静脉血压、通常所说的血压是指体循环的动脉血压</string>
+        <string name="heart_rate_describe">心率在非活动状态下升高可能表示您的健康出现了重大变化成年人在非活动状态下心率通常在每分钟50-100次左右。可因年龄、性别或其他生理因素产生个体差异</string>
+        <string name="temperature_describe">正常体温不是一个具体的温度点，而是一个温度范围。机体深部的体温较为恒定和均匀称深部体温；而体表的温度受多种因素影响，变化和差异较大称表层温度。</string>
+        <string name="save_record_quit_record_hint">再按一次退出应用</string>
+
+        <string name="splash_text_1">插卡联网后,微信扫描下载绑定【西萌守护】,可查看孩子定位等消息</string>
+        <string name="splash_text_2">【西萌主题】里含丰富精美表盘和壁纸,快去装饰你的手表吧~</string>
+        <string name="splash_text_3">【西萌市场】收录众多应用,可根据需要下载使用</string>
+
+        <string name="splash_next">下一步</string>
+        <string name="splash_know">知道了</string>
+        <string name="splash_binding">立即绑定</string>
+        <string name="record_file_error">录音文件出错</string>
+        <string name="complete">完成</string>
+        <string name="more">更多</string>
+        <string name="wifi">无线局域网</string>
+        <string name="battery_name">电量</string>
+        <string name="mobile_network">数据流量</string>
+        <string name="recent_tasks">最近任务</string>
+        <string name="screenshot">截屏</string>
+        <string name="tasks_clear">任务清理</string>
+        <string name="mute">静音</string>
+        <string name="brightness_setting">亮度调节</string>
+        <string name="cmcc">移动</string>
+        <string name="cucc">联通</string>
+        <string name="ctcc">电信</string>
+        <string name="cgcc">广电</string>
+        <string name="clear_cache_hint1">清理出%1$s空间，总内存%2$s</string>
+        <string name="clear_cache_hint2">已清理至最佳状态</string>
+        <string name="record_file_name_equals">该文件名已存在</string>
+        <string name="record_file_name_hint">文件名不能包含非法字符</string>
+
+        <string name="alarm_getup">起床</string>
+        <string name="alarm_later">稍后提醒</string>
+        <string name="alarm_title_edit">编辑闹钟</string>
+        <string name="alarm_change">更改时间</string>
+        <string name="alarm_repetition">重复</string>
+        <string name="alarm_tag">标签</string>
+        <string name="alarm_everyday">每天</string>
+        <string name="alarm_workday">工作日</string>
+        <string name="alarm_weekends">周末</string>
+        <string name="alarm_monday">星期一</string>
+        <string name="alarm_tuesday">星期二</string>
+        <string name="alarm_wednesday">星期三</string>
+        <string name="alarm_thursday">星期四</string>
+        <string name="alarm_friday">星期五</string>
+        <string name="alarm_saturday">星期六</string>
+        <string name="alarm_sunday">星期日</string>
+        <string name="alarm_edit_tag">编辑标签</string>
+        <string name="alarm_no">无闹钟</string>
+        <string name="alarm_hour_24">24小时</string>
+        <string name="alarm_only_one">仅一次</string>
+        <string name="alarm_close">停止</string>
+        <string name="alarm_time_am">上午</string>
+        <string name="alarm_time_pm">下午</string>
+        <string name="alarm_repetition_hint">闹钟时间和已设置闹钟时间相同，请重新设置</string>
+        <string name="incoming_call">来电</string>
+        <string name="call_swap_calls">切换通话</string>
+        <string name="call_calling_in">正在呼叫</string>
+        <string name="call_connecting">正在连接</string>
+        <string name="all_apps">所有App</string>
+        <string name="app_duplication">App已存在于列表</string>
+        <string name="fav_apps">精选</string>
+        <string name="shutdown">关机</string>
+        <string name="reboot">重启</string>
+
+        <string name="timer_app_name">计时器</string>
+        <string name="timer_recently_used">最近使用</string>
+        <string name="timer_all_timer">所有计时器</string>
+        <string name="timer_edit">编辑</string>
+        <string name="timer_hour">小时</string>
+        <string name="timer_minute">分钟</string>
+        <string name="timer_second">秒</string>
+        <string name="timer_start">开始</string>
+        <string name="timer_no_activity">无活跃计时器</string>
+        <string name="timer_minutes_30">30分钟</string>
+
+</resources>
