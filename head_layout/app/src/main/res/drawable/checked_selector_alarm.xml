@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- 当按钮被按下时的背景颜色 -->
-    <item android:drawable="@mipmap/ic_alarm_check" android:state_checked="true" />
-
-    <!-- 默认的背景颜色 -->
-    <item android:drawable="@drawable/bg_alarm_white_un" android:state_checked="false" />
-</selector>
