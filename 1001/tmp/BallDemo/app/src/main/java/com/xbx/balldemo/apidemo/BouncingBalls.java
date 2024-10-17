@@ -52,6 +52,7 @@ public class BouncingBalls extends Activity implements AnimatorBackListener {
      * Called when the activity is first created.
      */
     private final static String TAG = "bbs";
+    private final static String TAG2 = "bbc";
     private Context context;
     BallAnimationView animator;
     private Button btn;
@@ -66,8 +67,13 @@ public class BouncingBalls extends Activity implements AnimatorBackListener {
         btn = (Button) findViewById(R.id.btn);
         LinearLayout container = (LinearLayout) findViewById(R.id.container);
         context = this;
-        absolutely_x = ScreenUtil.getScreenWidth(this) / 32;
-        absolutely_y = (ScreenUtil.getScreenHeight(this) / 8 + (int) getResources().getDimension(R.dimen.w_height)) / 2;
+        absolutely_x = (ScreenUtil.getScreenWidth(this) - (int) getResources().getDimension(R.dimen.w_width)) / 16;
+        absolutely_y = ScreenUtil.getScreenHeight(this)/8 - (int) getResources().getDimension(R.dimen.w_height) / 2;
+
+        Log.i(TAG2,"screen_x:"+ ScreenUtil.getScreenWidth(this)+"    screen_y:"+ ScreenUtil.getScreenHeight(this));
+        Log.i(TAG2,"absolutely_x:"+absolutely_x+"    absolutely_y:"+absolutely_y);
+        Log.i(TAG2,"dimen_x:"+getResources().getDimension(R.dimen.w_width));
+        Log.i(TAG2,"dimen_y:"+getResources().getDimension(R.dimen.w_height));
         animator = new BallAnimationView(this);
         container.addView(animator);
         InitPopupWindows();
@@ -119,9 +125,9 @@ public class BouncingBalls extends Activity implements AnimatorBackListener {
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
                     WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
             layoutParams.format = PixelFormat.TRANSLUCENT;
-            layoutParams.x = absolutely_x;
+            //layoutParams.x = absolutely_x;
             layoutParams.y = absolutely_y;
-            layoutParams.gravity = Gravity.TOP;
+            layoutParams.gravity = Gravity.CENTER_HORIZONTAL|Gravity.TOP;
             layoutParams.width = (int) getResources().getDimension(R.dimen.w_width);
             layoutParams.height = (int) getResources().getDimension(R.dimen.w_height);
             layoutParams.windowAnimations = R.style.popwindowAnimStyle;
