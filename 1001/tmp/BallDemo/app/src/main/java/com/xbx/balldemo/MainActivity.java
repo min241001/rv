@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b2.setOnClickListener(this);
         b3.setOnClickListener(this);
         //animator.addUpdateListener(this);
-       // animator.addListener(this);
-        animator.setOnClickListener(this);
+        //animator.addListener(this);
+       // animator.setOnClickListener(this);
 
     }
 
@@ -62,14 +62,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn:
-                animator.start();
-                break;
-            case R.id.btn2:
                 Intent intent = new Intent(this, BouncingBalls.class);
                 startActivity(intent);
                 break;
-            case R.id.btn3:
+            case R.id.btn2:
                 ball2();
+                break;
+            case R.id.btn3:
+                animator.start();
                 break;
             default:
                 break;

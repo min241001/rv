@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:elevation="@dimen/_8dp">
+
+    <RelativeLayout
+        android:id="@+id/ball_popup_rl"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_app_item"
+        android:elevation="5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ball_popup_iv"
+            android:layout_width="36dip"
+            android:layout_height="36dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            app:shapeAppearance="@style/CircleStyle"
+            app:shapeAppearanceOverlay="@null"
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="4dp"
+            tools:ignore="MissingClass"></com.google.android.material.imageview.ShapeableImageView>
+        <!--android:padding="2dp"-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/ball_popup_iv">
+
+            <TextView
+                android:id="@+id/ball_popup_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/text_white"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/ball_popup_tv2"
+                android:layout_below="@+id/ball_popup_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp"></TextView>
+        </RelativeLayout>
+        <!-- android:layout_toLeftOf="@+id/item_card_gv_iv"
+                android:layout_above="@+id/item_card_gv_iv"-->
+    </RelativeLayout>
+</RelativeLayout>

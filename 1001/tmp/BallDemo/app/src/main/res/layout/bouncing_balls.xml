@@ -17,19 +17,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_purple"
-    android:layout_marginTop="60dip"
-    android:layout_marginBottom="60dip">
+    android:background="@android:color/holo_purple">
     <LinearLayout
         android:id="@+id/container"
-        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_width="120dp"
         android:layout_height="300dp"
         android:background="@android:color/holo_purple"
         android:orientation="vertical"></LinearLayout>
     <Button
         android:id="@+id/btn"
-        android:layout_alignTop="@+id/container"
+        android:layout_alignParentBottom="true"
         android:elevation="1dp"
         android:layout_marginTop="60dip"
         android:layout_width="wrap_content"

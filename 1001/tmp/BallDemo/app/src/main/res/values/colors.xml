@@ -151,4 +151,8 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
+    <color name="ball_color">#CC192037</color>
+    <color name="popup_window_color">#D61c2638</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_gray">#868686</color>
 </resources>
