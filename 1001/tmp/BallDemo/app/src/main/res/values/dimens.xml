@@ -42,4 +42,5 @@
     <dimen name="w_height">72dp</dimen>
     <dimen name="w_width">240dp</dimen>
     <dimen name="popup_radiu">36dp</dimen>
+    <dimen name="ball_size">25dp</dimen>
 </resources>

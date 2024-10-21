@@ -3,6 +3,7 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
@@ -19,12 +20,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.xbx.balldemo.apidemo.BouncingBalls;
+
 import com.xbx.balldemo.apidemo.VView;
+import com.xbx.balldemo.event.AnimatorBackListener2;
 import com.xbx.balldemo.view.AnimationView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener , Animator.AnimatorListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener , AnimatorBackListener2 {
     private Button b, b2,b3;
     private VView animator;
+    private final static String TAG = "main";
 
     //ValueAnimator.AnimatorUpdateListener,
     @Override
@@ -69,29 +73,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ball2();
                 break;
             case R.id.btn3:
-                animator.start();
+                animator.Show(this);
                 break;
             default:
                 break;
         }
     }
 
+int count;
     @Override
-    public void onAnimationStart(Animator animation) {
-
+    public void onAnimationStart(int i) {
+        Log.i(TAG, i + " start");
     }
 
     @Override
-    public void onAnimationEnd(Animator animation) {
+    public void onAnimationEnd(int i) {
+        count+=i;
+        Log.i(TAG, count + " end");
     }
 
     @Override
-    public void onAnimationCancel(Animator animation) {
-
+    public void onAnimationCancel(int i) {
+        Log.i(TAG, i + " cancel");
     }
 
     @Override
-    public void onAnimationRepeat(Animator animator) {
+    public void onAnimationRepeat(int i) {
+        Log.i(TAG, i + " repeat");
     }
 
     //others

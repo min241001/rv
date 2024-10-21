@@ -20,4 +20,8 @@
         <item name="android:windowEnterAnimation">@anim/ball_popup_in2</item>
         <item name="android:windowExitAnimation">@anim/ball_popup_out2</item>
     </style>
+    <style name="popwindowAnimStyle2" parent="android:Animation">
+        <!--<item name="android:windowEnterAnimation">@anim/ball_popup_in</item>-->
+        <item name="android:windowExitAnimation">@anim/ball_popup_out</item>
+    </style>
 </resources>

@@ -24,13 +24,14 @@ import com.xbx.balldemo.R;
 import com.xbx.balldemo.apidemo.BouncingBalls;
 import com.xbx.balldemo.apidemo.ShapeHolder;
 import com.xbx.balldemo.event.*;
+import com.xbx.balldemo.util.Constants;
 
 import java.util.ArrayList;
 
 /**
  * Create by pengmin on 2024/10/17 .
  */
-public class BallAnimationView extends View {
+public class BallAnimationView extends View implements ValueAnimator.AnimatorUpdateListener{
 
     private static final int RED = 0xffFF8080;
     private static final int BLUE = 0xff8080FF;
@@ -39,19 +40,16 @@ public class BallAnimationView extends View {
     private static final int translucent = 0x00000000;
     private static final int translucent2 = 0x00000001;
 
-    public final ArrayList<com.xbx.balldemo.apidemo.ShapeHolder> balls = new ArrayList<com.xbx.balldemo.apidemo.ShapeHolder>();
+    public final ArrayList<ShapeHolder> balls = new ArrayList<ShapeHolder>();
     AnimatorSet animation = null;
-    com.xbx.balldemo.apidemo.ShapeHolder newBall;
-    static final float y_range = 500;
-    static final float ball_size = 72f;
+    ShapeHolder newBall;
+    final float y_range = 500;
+    float ball_size = 50f;
+    float ball_increment = 25.0f;
     float startX = 0;
-    float h = 0;
     float startY = 0;
     float endY = 0;
-    private AnimationEventListener.OnAnimationStartListener onAnimationStartListener;
-    private AnimationEventListener.OnAnimationEndListener onAnimationEndListener;
-    private AnimationEventListener.OnAnimationCancelListener onAnimationCancelListener;
-    private AnimationEventListener.OnAnimationRepeatListener onAnimationRepeatListener;
+
     ValueAnimator fadeAnim=null;
     AnimatorSet animatorSet = null;
     private BouncingBalls context;
@@ -59,10 +57,12 @@ public class BallAnimationView extends View {
     public BallAnimationView(BouncingBalls context) {
         super(context);
         this.context = context;
-        setBackgroundColor(Color.TRANSPARENT);
+        //setBackgroundColor(Color.TRANSPARENT);
+        ball_size = getResources().getDimension(R.dimen.ball_size);
+        ball_increment = ball_size/4;
         //float h = getHeight();// 屏幕高度
         // Animate background color
-        float y = h;
+        float y  = (float)getHeight();
         startY=0;
         if(newBall != null){
             startY = newBall.getY();
@@ -70,7 +70,8 @@ public class BallAnimationView extends View {
         endY = getHeight() - ball_size;
         float h = (float)getHeight();
         //float eventY = event.getY();
-        int duration = (int)(y_range * ((h - y)/h));
+        //int duration = (int)(y_range * ((h - y)/h));
+        int duration = 0;
         // Note that setting the background color will automatically invalidate the
         // view, so that the animated color, and the bouncing balls, get redisplayed on
         // every frame of the animation.
@@ -98,62 +99,61 @@ public class BallAnimationView extends View {
 
         return true;
     }
-    /*public void stop(){
-        if(colorAnim!=null&& colorAnim.isRunning()) {
-            colorAnim.cancel();
-        }
-    }
-    public void start(){
-        if(colorAnim!=null&& !colorAnim.isRunning()) {
-            colorAnim.start();
-        }
-    }*/
-    public void Show(float x,float y){
-        Log.i("bbc","x:"+x+"y:"+y);
-        //ShapeHolder newBall = addBall(x,y);
-        h = y;
-        startX = x;
-        newBall = addBall(x,y);
 
+    int count=0;
+    public void Show(float x,float y){
+        count++;
+        Log.i(Constants.bavTAG,"count:"+count+"x:"+x+"y:"+y);
+        //ShapeHolder newBall = addBall(x,y);
+        newBall = addBall(x,y);
         // Bouncing animation with squash and stretch
-        //float startY = newBall.getY();
-        //float endY = getHeight() - ball_size;
+        startX = x;
         startY = newBall.getY();
         endY = getHeight() - ball_size;
         float h = (float)getHeight();
         //float eventY = event.getY();
         int duration = (int)(y_range * ((h - y)/h));
+        Log.i(Constants.bavTAG,"duration:"+duration);
+        if(duration <0){
+            duration = 0;
+        }
         ValueAnimator bounceAnim = ObjectAnimator.ofFloat(newBall, "y", startY, endY);
         bounceAnim.setDuration(duration);
         bounceAnim.setInterpolator(new AccelerateInterpolator());
+        bounceAnim.addUpdateListener(this);
         ValueAnimator squashAnim1 = ObjectAnimator.ofFloat(newBall, "x", newBall.getX(),
-                newBall.getX() - 25f);
+                newBall.getX() - ball_increment);
         squashAnim1.setDuration(duration/4);
         squashAnim1.setRepeatCount(1);
         squashAnim1.setRepeatMode(ValueAnimator.REVERSE);
         squashAnim1.setInterpolator(new DecelerateInterpolator());
+        squashAnim1.addUpdateListener(this);
         ValueAnimator squashAnim2 = ObjectAnimator.ofFloat(newBall, "width", newBall.getWidth(),
-                newBall.getWidth() + 50);
+                newBall.getWidth() + ball_size/2);//
         squashAnim2.setDuration(duration/4);
         squashAnim2.setRepeatCount(1);
         squashAnim2.setRepeatMode(ValueAnimator.REVERSE);
         squashAnim2.setInterpolator(new DecelerateInterpolator());
+        squashAnim2.addUpdateListener(this);
         ValueAnimator stretchAnim1 = ObjectAnimator.ofFloat(newBall, "y", endY,
-                endY + 25f);
+                endY + ball_increment);
         stretchAnim1.setDuration(duration/4);
         stretchAnim1.setRepeatCount(1);
         stretchAnim1.setInterpolator(new DecelerateInterpolator());
         stretchAnim1.setRepeatMode(ValueAnimator.REVERSE);
+        stretchAnim1.addUpdateListener(this);
         ValueAnimator stretchAnim2 = ObjectAnimator.ofFloat(newBall, "height",
-                newBall.getHeight(), newBall.getHeight() - 25);
+                newBall.getHeight(), newBall.getHeight() - ball_increment);
         stretchAnim2.setDuration(duration/4);
         stretchAnim2.setRepeatCount(1);
         stretchAnim2.setInterpolator(new DecelerateInterpolator());
         stretchAnim2.setRepeatMode(ValueAnimator.REVERSE);
+        stretchAnim2.addUpdateListener(this);
         ValueAnimator bounceBackAnim = ObjectAnimator.ofFloat(newBall, "y", endY,
                 startY);
         bounceBackAnim.setDuration(duration);
         bounceBackAnim.setInterpolator(new DecelerateInterpolator());
+        bounceBackAnim.addUpdateListener(this);
         // Sequence the down/squash&stretch/up animations
         AnimatorSet bouncer = new AnimatorSet();
         bouncer.play(bounceAnim).before(squashAnim1);
@@ -161,19 +161,35 @@ public class BallAnimationView extends View {
         bouncer.play(squashAnim1).with(stretchAnim1);
         bouncer.play(squashAnim1).with(stretchAnim2);
         bouncer.play(bounceBackAnim).after(stretchAnim2);
+        //bouncer.addUpdateListener(this);
 
         // Fading animation - remove the ball when the animation is done
          fadeAnim = ObjectAnimator.ofFloat(newBall, "alpha", 1f, 0f);
         fadeAnim.setDuration(250);
-        addAnimatorBackListener(context,1);
+        fadeAnim.addUpdateListener(this);
+        //addAnimatorBackListener(context,1);
         fadeAnim.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                if(onAnimationEndListener!=null){
-                    onAnimationEndListener.onAnimationEnd(animation);
-                }
+                addAnimatorBackListener(context,0);
+
                 balls.remove(((ObjectAnimator)animation).getTarget());
             }
+            @Override
+            public void onAnimationStart(Animator animation) {
+                addAnimatorBackListener(context,1);
+            }
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                addAnimatorBackListener(context,2);
+            }
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                addAnimatorBackListener(context,3);
+            }
+
+
+
         });
 
         // Sequence the two animations to play one after the other
@@ -181,9 +197,82 @@ public class BallAnimationView extends View {
         animatorSet.play(bouncer).before(fadeAnim);
         // Start the animation
         animatorSet.start();
-        addAnimatorBackListener(context,0);
+        //addAnimatorBackListener(context,0);
 
     }
+    public void addAnimatorBackListener(AnimatorBackListener3 al, int i){
+        switch(i){
+            case 0:
+                al.onAnimationStart(i);
+                break;
+            case 1:
+                al.onAnimationEnd(i);
+                break;
+            case 2:
+                al.onAnimationCancel(i);
+                break;
+            case 3:
+                al.onAnimationRepeat(i);
+                break;
+            default:break;
+        }
+    }
+
+    public void dismiss(){
+        if(animatorSet!=null&&animatorSet.isRunning()){
+            animatorSet.cancel();
+        }
+    }
+    public void Close(){
+        if(animatorSet!=null&&animatorSet.isRunning()){
+            animatorSet.cancel();
+        }
+        if(colorAnim!=null&&colorAnim.isRunning()) {
+            colorAnim.cancel();
+        }
+    }
+
+    private ShapeHolder addBall(float x, float y) {
+        OvalShape circle = new OvalShape();
+        circle.resize(ball_size, ball_size);
+        ShapeDrawable drawable = new ShapeDrawable(circle);
+        ShapeHolder shapeHolder = new ShapeHolder(drawable);
+        shapeHolder.setX(x - ball_size/2);
+        shapeHolder.setY(y - ball_size/2);
+        /*int red = (int)(Math.random() * 255);
+        int green = (int)(Math.random() * 255);
+        int blue = (int)(Math.random() * 255);
+        int color = 0xff000000 | red << 16 | green << 8 | blue;*/
+        int color = getResources().getColor(R.color.ball_color);
+        Paint paint = drawable.getPaint(); //new Paint(Paint.ANTI_ALIAS_FLAG);
+        //int darkColor = 0xff000000 | red/4 << 16 | green/4 << 8 | blue/4;
+        int darkColor = getResources().getColor(R.color.ball_color);
+        RadialGradient gradient = new RadialGradient(37.5f, 12.5f,
+                ball_size, color, darkColor, Shader.TileMode.CLAMP);
+        paint.setShader(gradient);
+        shapeHolder.setPaint(paint);
+        balls.add(shapeHolder);
+        return shapeHolder;
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        //canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);//绘制透明色
+        for (int i = 0; i < balls.size(); ++i) {
+            ShapeHolder shapeHolder = balls.get(i);
+            canvas.save();
+            canvas.translate(shapeHolder.getX(), shapeHolder.getY());
+            shapeHolder.getShape().draw(canvas);
+            canvas.restore();
+        }
+    }
+
+
+
+
+
+
+    //end
     Animator.AnimatorListener listener;
     public Animator.AnimatorListener GetListener( AnimatorBackListener al,int i){
         if(listener== null) {
@@ -244,7 +333,7 @@ public class BallAnimationView extends View {
         }
         return listener2;
     }
-    public void addAnimatorBackListener(AnimatorBackListener al,int i){
+    public void addAnimatorBackListener2(AnimatorBackListener al,int i){
         if(i==0) {
             animatorSet.removeListener(GetListener(al,i));
             animatorSet.addListener(GetListener(al,i));
@@ -255,40 +344,11 @@ public class BallAnimationView extends View {
     }
 
 
-    private com.xbx.balldemo.apidemo.ShapeHolder addBall(float x, float y) {
-        OvalShape circle = new OvalShape();
-        circle.resize(ball_size, ball_size);
-        ShapeDrawable drawable = new ShapeDrawable(circle);
-        com.xbx.balldemo.apidemo.ShapeHolder shapeHolder = new com.xbx.balldemo.apidemo.ShapeHolder(drawable);
-        shapeHolder.setX(x - ball_size/2);
-        shapeHolder.setY(y - ball_size/2);
-        /*int red = (int)(Math.random() * 255);
-        int green = (int)(Math.random() * 255);
-        int blue = (int)(Math.random() * 255);
-        int color = 0xff000000 | red << 16 | green << 8 | blue;*/
-        int color = getResources().getColor(R.color.ball_color);
-        Paint paint = drawable.getPaint(); //new Paint(Paint.ANTI_ALIAS_FLAG);
-        //int darkColor = 0xff000000 | red/4 << 16 | green/4 << 8 | blue/4;
-        int darkColor = getResources().getColor(R.color.ball_color);
-        RadialGradient gradient = new RadialGradient(37.5f, 12.5f,
-                ball_size, color, darkColor, Shader.TileMode.CLAMP);
-        paint.setShader(gradient);
-        shapeHolder.setPaint(paint);
-        balls.add(shapeHolder);
-        return shapeHolder;
-    }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        //canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);//绘制透明色
-        for (int i = 0; i < balls.size(); ++i) {
-            ShapeHolder shapeHolder = balls.get(i);
-            canvas.save();
-            canvas.translate(shapeHolder.getX(), shapeHolder.getY());
-            shapeHolder.getShape().draw(canvas);
-            canvas.restore();
-        }
-    }
+    private AnimationEventListener.OnAnimationStartListener onAnimationStartListener;
+    private AnimationEventListener.OnAnimationEndListener onAnimationEndListener;
+    private AnimationEventListener.OnAnimationCancelListener onAnimationCancelListener;
+    private AnimationEventListener.OnAnimationRepeatListener onAnimationRepeatListener;
     public void setAnimationStart(AnimationEventListener.OnAnimationStartListener mOnAnimationStartListener) {
         this.onAnimationStartListener = mOnAnimationStartListener;
     }
@@ -302,5 +362,10 @@ public class BallAnimationView extends View {
 
     public void setAnimationRepeat(AnimationEventListener.OnAnimationRepeatListener mOnAnimationRepeatListener) {
         this.onAnimationRepeatListener = mOnAnimationRepeatListener;
+    }
+
+    @Override
+    public void onAnimationUpdate(ValueAnimator valueAnimator) {
+        this.invalidate();
     }
 }

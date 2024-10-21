@@ -19,161 +19,175 @@ package com.xbx.balldemo.apidemo;
 // Need the following import to get access to the app resources, since this
 // class is in a sub-package.
 
-import static android.os.SystemClock.sleep;
-
-import android.animation.*;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.PixelFormat;
-import android.media.Image;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
+import android.provider.Settings;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import com.xbx.balldemo.R;
-import com.xbx.balldemo.event.AnimatorBackListener;
+import com.xbx.balldemo.event.AnimatorBackListener3;
+import com.xbx.balldemo.util.Constants;
 import com.xbx.balldemo.util.ScreenUtil;
 import com.xbx.balldemo.view.BallAnimationView;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.xbx.balldemo.view.MessageWindow;
 
 
-public class BouncingBalls extends Activity implements AnimatorBackListener {
+public class BouncingBalls extends Activity implements AnimatorBackListener3 {
     /**
      * Called when the activity is first created.
      */
-    private final static String TAG = "bbs";
-    private final static String TAG2 = "bbc";
+
     private Context context;
     BallAnimationView animator;
     private Button btn;
-    private int count = 0;
+
     private int absolutely_x = 0;
     private int absolutely_y = 0;
+    private MessageWindow mpw = null;
+    LinearLayout container = null;
+    private int count2 = 0;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //View v  = LayoutInflater.from(this).inflate(R.layout.bouncing_balls, null, false);
         setContentView(R.layout.bouncing_balls);
-        btn = (Button) findViewById(R.id.btn);
-        LinearLayout container = (LinearLayout) findViewById(R.id.container);
         context = this;
-        absolutely_x = (ScreenUtil.getScreenWidth(this) - (int) getResources().getDimension(R.dimen.w_width)) / 16;
-        absolutely_y = ScreenUtil.getScreenHeight(this)/8 - (int) getResources().getDimension(R.dimen.w_height) / 2;
+        btn = (Button) findViewById(R.id.btn);
+        container = (LinearLayout) findViewById(R.id.container);
+        InitAnimation();
 
-        Log.i(TAG2,"screen_x:"+ ScreenUtil.getScreenWidth(this)+"    screen_y:"+ ScreenUtil.getScreenHeight(this));
-        Log.i(TAG2,"absolutely_x:"+absolutely_x+"    absolutely_y:"+absolutely_y);
-        Log.i(TAG2,"dimen_x:"+getResources().getDimension(R.dimen.w_width));
-        Log.i(TAG2,"dimen_y:"+getResources().getDimension(R.dimen.w_height));
-        animator = new BallAnimationView(this);
-        container.addView(animator);
-        InitPopupWindows();
+        GetPremisstion();
         btn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                //InitPopupWindows();
-                // PopupShow();
-                count++;
-                //animator.Show(container.getX() / 2, container.getY());
-                animator.Show(container.getX() / 2, absolutely_y + (int) getResources().getDimension(R.dimen.w_height) / 2);
+                count2++;
+                container.setVisibility(View.VISIBLE);
+                animator.Show(container.getWidth() / 2, absolutely_y);//+ (int) getResources().getDimension(R.dimen.w_height) / 2
+                Log.i("bbc", "000");
+                //animator.Show((float) ScreenUtil.getScreenWidth(BouncingBalls.this) / 2, absolutely_y + (float) (int) getResources().getDimension(R.dimen.w_height) / 2);
             }
         });
     }
 
-    @Override
-    public void onAnimationStart(Animator var1, int i) {
-        Log.i(TAG, i + " start");
+    private void InitAnimation() {
+        absolutely_x = ScreenUtil.getScreenWidth(this) / 32;
+        absolutely_y = (ScreenUtil.getScreenHeight(this) / 8);//+ (int) getResources().getDimension(R.dimen.w_height)) / 2
+        animator = new BallAnimationView(this);
+        container.addView(animator);
+        mpw = new MessageWindow(this, absolutely_x, absolutely_y);
     }
 
     @Override
+    public void onAnimationStart(int i) {
+        Log.i(Constants.bbsTAG, i + " start");
+    }
+
+    int count = 0;
+    @Override
+    public void onAnimationEnd(int i) {
+        Log.i(Constants.bbsTAG, i + " end:" + count);
+        count++;
+        //animator.dismiss();
+        count2--;
+        if (count2 <= 0) {
+            container.setVisibility(View.GONE);
+        }
+        mpw.ShowWindow();
+    }
+
+    @Override
+    public void onAnimationCancel(int i) {
+        Log.i(Constants.bbsTAG, i + " cancel");
+    }
+
+    @Override
+    public void onAnimationRepeat(int i) {
+        Log.i(Constants.bbsTAG, i + " repeat");
+
+    }
+
+    private void GetPremisstion() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(context)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:" + context.getPackageName()));
+            startActivityForResult(intent, 2909);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 2909: {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.e("Permission", "Granted");
+                } else {
+                    Log.e("Permission", "Denied");
+                }
+                return;
+            }
+        }
+    }
+
+   /* @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_DOWN &&
+                event.getAction() != MotionEvent.ACTION_MOVE) {
+            //Show(event.getX(), event.getY());
+            return false;
+        }
+
+        return true;
+    }*/
+
+
+   /*implements AnimatorBackListener
+
+   @Override
+   public void onAnimationStart(Animator var1, int i) {
+       Log.i(Constants.bbsTAG, i + " start");
+   }
+
+    @Override
     public void onAnimationEnd(Animator var1, int i) {
-        Log.i(TAG, i + " end:" + count);
-        //animator.stop();
-        PopupShow();
+        Log.i(Constants.bbsTAG, i + " end:" + count);
+        //animator.dismiss();
+        count2--;
+        if(count2<=0) {
+            container.setVisibility(View.GONE);
+        }
+        mpw.ShowWindow();
     }
 
     @Override
     public void onAnimationCancel(Animator var1, int i) {
-        Log.i(TAG, i + " cancel");
+        Log.i(Constants.bbsTAG, i + " cancel");
     }
 
     @Override
     public void onAnimationRepeat(Animator var1, int i) {
-        Log.i(TAG, i + " repeat");
+        Log.i(Constants.bbsTAG, i + " repeat");
+    }*/
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mpw.CloseWindow();
+        animator.Close();
     }
 
-    WindowManager windowManager = null;
-    View popup_v = null;
-    WindowManager.LayoutParams layoutParams = null;
 
-    public void InitPopupWindows() {
-        popup_v = LayoutInflater.from(this).inflate(R.layout.layout_tips, null);
-        windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
-        if (windowManager != null) {
-            layoutParams = new WindowManager.LayoutParams();
-            layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |    //不拦截页面点击事件
-                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
-                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
-            layoutParams.format = PixelFormat.TRANSLUCENT;
-            //layoutParams.x = absolutely_x;
-            layoutParams.y = absolutely_y;
-            layoutParams.gravity = Gravity.CENTER_HORIZONTAL|Gravity.TOP;
-            layoutParams.width = (int) getResources().getDimension(R.dimen.w_width);
-            layoutParams.height = (int) getResources().getDimension(R.dimen.w_height);
-            layoutParams.windowAnimations = R.style.popwindowAnimStyle;
-            InitPopupView(popup_v);
-
-        }
-
-    }
-
-    private void InitPopupView(View v) {
-        ImageView iv = v.findViewById(R.id.ball_popup_iv);
-        iv.setImageResource(R.drawable.ic_launcher_background);
-        TextView tv1 = v.findViewById(R.id.ball_popup_tv1);
-        TextView tv2 = v.findViewById(R.id.ball_popup_tv2);
-        tv1.setText("微信消息");
-        tv2.setText("new message");
-    }
-
-    private void PopupShow() {
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    if (windowManager != null && layoutParams != null) {
-                        windowManager.removeViewImmediate(popup_v);
-                    }
-
-                } catch (Exception e) {
-                }finally{
-                    windowManager.addView(popup_v, layoutParams);
-                }
-            }
-        });
-
-
-    }
-
-    private void PopupDismiss() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (windowManager != null) {
-                    windowManager.removeViewImmediate(popup_v);
-                    windowManager = null;
-                }
-            }
-        }, 1);
-    }
 }
+
+
+
