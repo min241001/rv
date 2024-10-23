@@ -2,13 +2,13 @@
 
 buildscript {
     repositories {
-        /*jcenter()
+        jcenter()
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        google()*/
-        maven { url 'https://maven.aliyun.com/repository/google' }
+        google()
+        /*maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { name 'Google' }
@@ -16,7 +16,7 @@ buildscript {
         gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
+        jcenter()*/
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
@@ -29,14 +29,14 @@ buildscript {
 
 allprojects {
     repositories {
-        /*jcenter()
+        jcenter()
         maven { url "https://jitpack.io" }
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        google()*/
-        maven { url 'https://maven.aliyun.com/repository/public/' }
+        google()
+        /*maven { url 'https://maven.aliyun.com/repository/public/' }
         maven { url 'https://maven.aliyun.com/repository/public/' }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url "https://jitpack.io" }
@@ -45,7 +45,7 @@ allprojects {
         gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
+        jcenter()*/
     }
 }
 
